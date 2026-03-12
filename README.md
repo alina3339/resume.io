@@ -13,4 +13,4 @@ automation, integrations, and financial system optimisation.
 
 ## Resume
 Download the full resume here:
-[Download Resume](Azhar Resume CC 1.4 -1.pdf)
+[Download Resume](Azhar_Resume_CC_1.4-1.pdf)
