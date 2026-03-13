@@ -1,4 +1,4 @@
-body {
+body{
 
 margin:0;
 background:#ffffff;
@@ -8,31 +8,8 @@ font-family:Inter, sans-serif;
 line-height:1.8;
 
 }
-.modules {
 
-list-style:none;
-padding:0;
-
-}
-
-.modules li {
-
-margin-bottom:18px;
-font-size:18px;
-line-height:1.6;
-
-}
-
-.modules strong {
-
-display:block;
-font-weight:500;
-font-size:19px;
-margin-bottom:4px;
-
-}
-
-.container {
+.container{
 
 max-width:780px;
 margin:auto;
@@ -40,155 +17,114 @@ padding:80px 24px;
 
 }
 
-header {
+/* Heading typography */
 
-margin-bottom:70px;
+h1{
 
-}
-
-h1 {
-
-font-family:"Playfair Display", serif;
-font-size:44px;
-font-weight:500;
-margin-bottom:10px;
+font-family:"Source Sans 3", sans-serif;
+font-size:48px;
+font-weight:600;
+letter-spacing:-0.5px;
+margin-bottom:8px;
 
 }
 
-.subtitle {
+.subtitle{
 
 font-size:20px;
-color:#666;
-margin-bottom:35px;
+color:#4a4a4a;
+margin-bottom:36px;
 
 }
 
-nav {
+/* Navigation */
+
+nav{
 
 display:flex;
+gap:24px;
 flex-wrap:wrap;
-gap:20px;
 
 }
 
-nav a {
+nav a{
 
-text-decoration:none;
-color:#444;
 font-size:17px;
+text-decoration:none;
+color:#1a1a1a;
+font-weight:500;
 
 }
 
-nav a:hover {
+nav a:hover{
 
-color:black;
+color:#007a33;
 
 }
 
-section {
+/* Sections */
+
+section{
 
 margin-bottom:70px;
 
 }
 
-h2 {
+h2{
 
+font-family:"Source Sans 3", sans-serif;
 font-size:26px;
-margin-bottom:16px;
+font-weight:600;
+margin-bottom:18px;
 
 }
 
-p {
+p{
 
 font-size:18px;
-color:#444;
+color:#333;
 
 }
 
-ul {
+ul{
 
 padding-left:22px;
 
 }
 
-li {
+li{
 
 font-size:18px;
 margin-bottom:10px;
 
 }
 
-.project {
+/* Mobile responsiveness */
 
-margin-bottom:30px;
+@media (max-width:600px){
 
-}
-
-.project h3 {
-
-font-size:20px;
-margin-bottom:6px;
-
-}
-
-footer {
-
-margin-top:80px;
-font-size:15px;
-color:#888;
-
-}
-
-/* MOBILE OPTIMISATION */
-
-@media (max-width: 600px) {
-
-.container {
+.container{
 
 padding:50px 20px;
 
 }
 
-h1 {
+h1{
 
-font-size:34px;
+font-size:36px;
 
 }
 
-.subtitle {
+.subtitle{
 
 font-size:18px;
 
 }
 
-nav {
+nav{
 
 flex-direction:column;
 gap:12px;
-
-}
-
-nav a {
-
-font-size:18px;
-
-}
-
-h2 {
-
-font-size:24px;
-
-}
-
-p {
-
-font-size:18px;
-
-}
-
-li {
-
-font-size:18px;
 
 }
 
