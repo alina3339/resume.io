@@ -1,109 +1,172 @@
-body{
+body {
 
 margin:0;
 background:#ffffff;
 color:#1a1a1a;
+
 font-family:Inter, sans-serif;
-line-height:1.7;
+line-height:1.8;
 
 }
 
-.container{
+.container {
 
-max-width:760px;
+max-width:780px;
 margin:auto;
 padding:80px 24px;
 
 }
 
-header{
+header {
 
-margin-bottom:80px;
+margin-bottom:70px;
 
 }
 
-h1{
+h1 {
 
 font-family:"Playfair Display", serif;
-font-size:42px;
+font-size:44px;
 font-weight:500;
 margin-bottom:10px;
 
 }
 
-.subtitle{
+.subtitle {
 
+font-size:20px;
 color:#666;
-font-size:18px;
-margin-bottom:30px;
+margin-bottom:35px;
 
 }
 
-nav a{
+nav {
 
-margin-right:24px;
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+
+}
+
+nav a {
+
 text-decoration:none;
 color:#444;
-font-size:15px;
+font-size:17px;
 
 }
 
-nav a:hover{
+nav a:hover {
 
 color:black;
 
 }
 
-section{
+section {
 
-margin-bottom:80px;
-
-}
-
-h2{
-
-font-size:22px;
-font-weight:500;
-margin-bottom:18px;
+margin-bottom:70px;
 
 }
 
-p{
+h2 {
 
-font-size:17px;
+font-size:26px;
+margin-bottom:16px;
+
+}
+
+p {
+
+font-size:18px;
 color:#444;
 
 }
 
-ul{
+ul {
 
-padding-left:20px;
-
-}
-
-li{
-
-margin-bottom:8px;
+padding-left:22px;
 
 }
 
-.project{
-
-margin-bottom:28px;
-
-}
-
-.project h3{
+li {
 
 font-size:18px;
-margin-bottom:5px;
+margin-bottom:10px;
 
 }
 
-footer{
+.project {
+
+margin-bottom:30px;
+
+}
+
+.project h3 {
+
+font-size:20px;
+margin-bottom:6px;
+
+}
+
+footer {
 
 margin-top:80px;
+font-size:15px;
 color:#888;
-font-size:14px;
+
+}
+
+/* MOBILE OPTIMISATION */
+
+@media (max-width: 600px) {
+
+.container {
+
+padding:50px 20px;
+
+}
+
+h1 {
+
+font-size:34px;
+
+}
+
+.subtitle {
+
+font-size:18px;
+
+}
+
+nav {
+
+flex-direction:column;
+gap:12px;
+
+}
+
+nav a {
+
+font-size:18px;
+
+}
+
+h2 {
+
+font-size:24px;
+
+}
+
+p {
+
+font-size:18px;
+
+}
+
+li {
+
+font-size:18px;
+
+}
 
 }
