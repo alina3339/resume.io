@@ -8,6 +8,29 @@ font-family:Inter, sans-serif;
 line-height:1.8;
 
 }
+.modules {
+
+list-style:none;
+padding:0;
+
+}
+
+.modules li {
+
+margin-bottom:18px;
+font-size:18px;
+line-height:1.6;
+
+}
+
+.modules strong {
+
+display:block;
+font-weight:500;
+font-size:19px;
+margin-bottom:4px;
+
+}
 
 .container {
 
