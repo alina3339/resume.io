@@ -1,205 +1,263 @@
-/* ---------- Base Layout ---------- */
+/* GLOBAL */
 
-body {
+body{
+
+background:#0b0c10;
+color:#e5e7eb;
 
 margin:0;
-background:#ffffff;
-color:#1a1a1a;
 
-font-family:Inter, sans-serif;
-line-height:1.8;
+font-family:"JetBrains Mono", monospace;
+
+line-height:1.7;
 
 }
 
-.container {
 
-max-width:820px;
+/* CONTAINER */
+
+.container{
+
+max-width:900px;
+
 margin:auto;
-padding:70px 22px;
+
+padding:70px 24px;
 
 }
 
-/* ---------- Header ---------- */
 
-.header {
+/* HEADER */
 
-margin-bottom:70px;
+h1{
 
-}
+font-family:"Rajdhani", sans-serif;
 
-h1 {
+font-size:48px;
 
-font-family:"Playfair Display", serif;
-font-size:42px;
-margin-bottom:8px;
+letter-spacing:2px;
 
-}
+text-transform:uppercase;
 
-.subtitle {
-
-font-size:20px;
-color:#555;
-margin-bottom:28px;
+margin-bottom:10px;
 
 }
 
-/* ---------- Navigation ---------- */
 
-nav {
+.subtitle{
+
+color:#9ca3af;
+
+font-size:18px;
+
+margin-bottom:35px;
+
+}
+
+
+/* NAVIGATION */
+
+nav{
 
 display:flex;
-gap:22px;
+
+gap:24px;
+
 flex-wrap:wrap;
 
+margin-bottom:50px;
+
 }
 
-nav a {
+
+nav a{
 
 text-decoration:none;
-color:#333;
-font-size:17px;
+
+color:#d1d5db;
+
+font-size:16px;
 
 }
 
-nav a:hover {
 
-color:#000;
+nav a:hover{
+
+color:#d6ff5f;
 
 }
 
-.resume-btn {
 
-padding:8px 16px;
-border:1px solid #ddd;
+.resume-btn{
+
+border:1px solid rgba(255,255,255,0.25);
+
+padding:8px 14px;
+
 border-radius:6px;
 
 }
 
-.resume-btn:hover {
 
-background:#f5f5f5;
+.resume-btn:hover{
+
+background:rgba(255,255,255,0.08);
 
 }
 
-/* ---------- Sections ---------- */
 
-section {
+/* SECTIONS */
+
+section{
 
 margin-bottom:70px;
 
 }
 
-h2 {
 
-font-size:26px;
-margin-bottom:16px;
+h2{
 
-}
+font-family:"Rajdhani", sans-serif;
 
-p {
+font-size:28px;
 
-font-size:18px;
-color:#444;
+letter-spacing:1.5px;
 
-}
-
-/* ---------- Expertise ---------- */
-
-.expertise {
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:8px;
-
-list-style:none;
-padding:0;
-
-}
-
-.expertise li {
-
-font-size:18px;
-
-}
-
-/* ---------- Modules ---------- */
-
-.modules {
-
-list-style:none;
-padding:0;
-
-}
-
-.modules li {
+text-transform:uppercase;
 
 margin-bottom:18px;
-font-size:18px;
-line-height:1.6;
+
+color:white;
 
 }
 
-.modules strong {
 
-display:block;
-font-weight:500;
-font-size:19px;
-margin-bottom:4px;
+p{
 
-}
+font-size:17px;
 
-/* ---------- Footer ---------- */
-
-footer {
-
-margin-top:80px;
-font-size:14px;
-color:#888;
+color:#d1d5db;
 
 }
 
-/* ---------- Mobile Optimisation ---------- */
 
-@media (max-width:600px){
+/* EXPERTISE GRID */
 
-.container {
+.expertise{
 
-padding:50px 20px;
+list-style:none;
 
-}
+padding:0;
 
-h1 {
+display:grid;
 
-font-size:34px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 
-}
-
-.subtitle {
-
-font-size:18px;
-
-}
-
-nav {
-
-flex-direction:column;
 gap:12px;
 
 }
 
-nav a {
 
-font-size:18px;
+.expertise li{
+
+font-size:17px;
+
+border-left:2px solid #d6ff5f;
+
+padding-left:10px;
 
 }
 
-h2 {
+
+/* MODULE LIST */
+
+.modules{
+
+list-style:none;
+
+padding:0;
+
+}
+
+
+.modules li{
+
+border-top:1px solid rgba(255,255,255,0.15);
+
+padding:18px 0;
+
+font-size:17px;
+
+}
+
+
+.modules strong{
+
+display:block;
+
+font-family:"Rajdhani", sans-serif;
+
+font-size:20px;
+
+letter-spacing:1px;
+
+color:white;
+
+margin-bottom:4px;
+
+}
+
+
+/* FOOTER */
+
+footer{
+
+margin-top:80px;
+
+font-size:14px;
+
+color:#888;
+
+}
+
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width:600px){
+
+.container{
+
+padding:45px 20px;
+
+}
+
+h1{
+
+font-size:36px;
+
+}
+
+.subtitle{
+
+font-size:17px;
+
+}
+
+nav{
+
+flex-direction:column;
+
+gap:14px;
+
+}
+
+h2{
 
 font-size:24px;
 
 }
 
-p {
+p{
 
 font-size:18px;
 
