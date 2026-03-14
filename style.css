@@ -107,7 +107,7 @@ nav a:hover::after {
 .resume-btn {
   border: 1.5px solid rgba(45, 212, 191, 0.5);
   padding: 8px 20px;
-  border-radius: 12px;        /* rounded rectangle */
+  border-radius: 6px;        /* rounded rectangle */
   background: transparent;
   font-weight: 600;
   letter-spacing: 0.5px;
