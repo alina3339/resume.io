@@ -107,7 +107,7 @@ nav a:hover::after {
 .resume-btn {
   border: 1.5px solid rgba(45, 212, 191, 0.5);
   padding: 8px 20px;
-  border-radius: 6px;        /* rounded rectangle */
+  border-radius: 6px;
   background: transparent;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -172,6 +172,7 @@ p {
   font-weight: 300;
   line-height: 1.8;
 }
+
 #about p {
   text-align: justify;
   hyphens: auto;
@@ -217,13 +218,6 @@ p {
   color: #cbd5e1;
   display: flex;
   flex-direction: column;      /* stack name above description */
-  transition: background 0.2s ease;
-}
-
-.modules li:hover {
-  background: rgba(255,255,255,0.02);
-  padding-left: 15px;
-  border-radius: 12px;
 }
 
 .modules strong {
