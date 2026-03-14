@@ -44,7 +44,7 @@ h1 {
   color: #ffffff;
   margin-bottom: 15px;
   line-height: 1.2;
-  text-shadow: 0 2px 10px rgba(45, 212, 191, 0.15); /* teal glow */
+  text-shadow: 0 2px 10px rgba(45, 212, 191, 0.15);
 }
 
 .subtitle {
@@ -92,7 +92,7 @@ nav a::after {
   left: 0;
   width: 0%;
   height: 2px;
-  background: #2dd4bf; /* teal underline */
+  background: #2dd4bf;
   transition: width 0.3s ease;
 }
 
@@ -105,9 +105,9 @@ nav a:hover::after {
 }
 
 .resume-btn {
-  border: 1.5px solid rgba(45, 212, 191, 0.5); /* teal border */
+  border: 1.5px solid rgba(45, 212, 191, 0.5);
   padding: 8px 20px;
-  border-radius: 40px;
+  border-radius: 12px;        /* rounded rectangle */
   background: transparent;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -122,7 +122,7 @@ nav a:hover::after {
 }
 
 .resume-btn::after {
-  display: none; /* Remove underline for button */
+  display: none;
 }
 
 /* ===== SECTIONS (Premium Cards) ===== */
@@ -162,7 +162,7 @@ h2::after {
   left: 0;
   width: 60px;
   height: 3px;
-  background: #2dd4bf; /* teal accent */
+  background: #2dd4bf;
   border-radius: 3px;
 }
 
@@ -187,7 +187,7 @@ p {
   font-weight: 400;
   padding: 12px 18px;
   background: rgba(255,255,255,0.02);
-  border-left: 4px solid #2dd4bf; /* teal accent */
+  border-left: 4px solid #2dd4bf;
   border-radius: 8px;
   transition: all 0.3s ease;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
@@ -211,8 +211,7 @@ p {
   font-size: 17px;
   color: #cbd5e1;
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
+  flex-direction: column;      /* stack name above description */
   transition: background 0.2s ease;
 }
 
@@ -227,8 +226,7 @@ p {
   font-size: 22px;
   font-weight: 600;
   color: #ffffff;
-  min-width: 200px;
-  margin-right: 20px;
+  margin-bottom: 8px;          /* space between name and description */
   letter-spacing: 0.5px;
 }
 
@@ -269,9 +267,5 @@ footer p {
   }
   .modules li {
     flex-direction: column;
-  }
-  .modules strong {
-    margin-bottom: 6px;
-    min-width: auto;
   }
 }
