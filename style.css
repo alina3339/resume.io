@@ -8,9 +8,9 @@
 }
 
 body {
-  /* Soft light gradient background – lets the glass effect stand out */
+  /* Soft light gradient – fully visible through glass */
   background: linear-gradient(145deg, #f0f4fa 0%, #d9e2ef 100%);
-  color: #1e293b;               /* dark text for contrast on glass */
+  color: #1e293b;
   font-family: 'JetBrains Mono', monospace;
   font-weight: 400;
   line-height: 1.7;
@@ -42,7 +42,7 @@ h1 {
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #0f172a;               /* darker heading for contrast */
+  color: #0f172a;
   margin-bottom: 15px;
   line-height: 1.2;
   text-shadow: 0 2px 5px rgba(255,255,255,0.5);
@@ -93,7 +93,7 @@ nav a::after {
   left: 0;
   width: 0%;
   height: 2px;
-  background: #2dd4bf;          /* teal accent stays */
+  background: #2dd4bf;
   transition: width 0.3s ease;
 }
 
@@ -109,8 +109,9 @@ nav a:hover::after {
   border: 1.5px solid rgba(45, 212, 191, 0.5);
   padding: 8px 20px;
   border-radius: 6px;
-  background: rgba(255,255,255,0.2);   /* slight white fill */
-  backdrop-filter: blur(4px);           /* glass on button too */
+  background: rgba(255,255,255,0.1);        /* transparent glass */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   font-weight: 600;
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
@@ -127,23 +128,22 @@ nav a:hover::after {
   display: none;
 }
 
-/* ===== SECTIONS – APPLE GLASS CARDS ===== */
+/* ===== SECTIONS – ULTRA‑TRANSPARENT GLASS ===== */
 section {
-  background: rgba(255, 255, 255, 0.3);    /* semi‑transparent white */
-  backdrop-filter: blur(12px);              /* strong blur for glass */
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.6);  /* light border */
+  background: rgba(255, 255, 255, 0.08);    /* very light tint */
+  backdrop-filter: blur(20px);               /* strong blur */
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.25);  /* soft border */
   border-radius: 28px;
   padding: 40px 45px;
   margin-bottom: 50px;
-  box-shadow: 0 20px 40px -15px rgba(0,0,0,0.2);
+  box-shadow: 0 20px 40px -15px rgba(0,0,0,0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 section:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 30px 50px -20px rgba(0,0,0,0.3);
-  border-color: rgba(255,255,255,0.9);
+  background: rgba(255, 255, 255, 0.15);     /* slightly more opaque on hover */
+  border-color: rgba(255,255,255,0.4);
 }
 
 h2 {
@@ -195,8 +195,9 @@ p {
   font-size: 17px;
   font-weight: 400;
   padding: 12px 18px;
-  background: rgba(255,255,255,0.4);        /* glass effect inside */
-  backdrop-filter: blur(4px);
+  background: rgba(255,255,255,0.15);       /* semi‑transparent glass */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-left: 4px solid #2dd4bf;
   border-radius: 12px;
   transition: all 0.3s ease;
@@ -204,7 +205,7 @@ p {
 }
 
 .expertise li:hover {
-  background: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.3);
   transform: scale(1.02);
   border-left-width: 6px;
 }
