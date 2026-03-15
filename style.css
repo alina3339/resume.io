@@ -459,6 +459,66 @@ footer p {
     font-size: 22px;
   }
 }
+/* ===== LIGHT MODE OVERRIDES ===== */
+body.light-mode {
+  color: #1e293b;  /* dark text for body */
+}
+
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode .subtitle,
+body.light-mode nav a,
+body.light-mode .modules strong,
+body.light-mode footer p {
+  color: #0f172a; /* even darker for headings */
+}
+
+body.light-mode .subtitle {
+  color: #334155;
+  border-bottom-color: rgba(0,0,0,0.1);
+}
+
+body.light-mode section {
+  background: rgba(255, 255, 255, 0.4); /* light glass */
+  border-color: rgba(255,255,255,0.8);
+}
+
+body.light-mode .expertise li {
+  background: rgba(255,255,255,0.5);
+  color: #1e293b;
+  border-color: rgba(0,0,0,0.1);
+}
+
+body.light-mode .modules li {
+  color: #1e293b;
+  border-bottom-color: rgba(0,0,0,0.1);
+}
+
+body.light-mode .modules li:hover {
+  background: rgba(255,255,255,0.7);
+}
+
+body.light-mode footer {
+  color: #475569;
+  border-top-color: rgba(0,0,0,0.1);
+}
+
+body.light-mode footer::before {
+  background: linear-gradient(90deg, transparent, #ff9a9e, #fad0c4, #a18cd1, transparent);
+}
+
+body.light-mode .resume-btn {
+  background: rgba(0,0,0,0.05);
+  border-color: rgba(0,0,0,0.2);
+  color: #1e293b;
+}
+
+body.light-mode .resume-btn:hover {
+  background: rgba(45, 212, 191, 0.2);
+  border-color: #2dd4bf;
+  color: #0f172a;
+}
+
 /* ===== BACKGROUND SWITCHER (testing tool) ===== */
 .bg-switcher {
   position: fixed;
@@ -534,9 +594,15 @@ footer p {
   transform: translateX(-5px);
 }
 
-/* Light mode adjustment for switcher buttons (if needed) */
-body[style*="color: #1e293b"] .bg-options button {
+/* Light mode adjustment for switcher buttons */
+body.light-mode .bg-toggle {
+  background: rgba(255,255,255,0.6);
   color: #1e293b;
-  background: rgba(255,255,255,0.7);
+  border-color: rgba(0,0,0,0.2);
+}
+
+body.light-mode .bg-options button {
+  background: rgba(255,255,255,0.8);
+  color: #1e293b;
   border-color: rgba(0,0,0,0.1);
 }
