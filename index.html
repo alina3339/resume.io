@@ -160,15 +160,13 @@ Transaction Processing • Item Management • Payment Processing • Mass Updat
     light: 'linear-gradient(145deg, #f0f4fa 0%, #e2e8f0 100%)'
   };
 
-  // Apply background and adjust text colors for light mode
+  // Apply background and toggle light mode class
   function setBackground(key) {
     document.body.style.background = backgrounds[key];
-    // For light mode, also adjust text color (optional – helps readability)
     if (key === 'light') {
-      document.body.style.color = '#1e293b'; // dark text
-      // You might also want to adjust other elements, but this is enough for testing
+      document.body.classList.add('light-mode');
     } else {
-      document.body.style.color = ''; // revert to default (white)
+      document.body.classList.remove('light-mode');
     }
   }
 
@@ -180,7 +178,7 @@ Transaction Processing • Item Management • Payment Processing • Mass Updat
     });
   });
 
-  // Toggle switcher open/close (optional)
+  // Toggle switcher open/close
   document.querySelector('.bg-toggle').addEventListener('click', () => {
     document.querySelector('.bg-switcher').classList.toggle('open');
   });
