@@ -138,6 +138,52 @@ Transaction Processing • Item Management • Payment Processing • Mass Updat
 </footer>
 
 </div>
+<!-- ===== BACKGROUND SWITCHER (for testing) ===== -->
+<div class="bg-switcher">
+  <button class="bg-toggle" aria-label="Change background">🎨</button>
+  <div class="bg-options">
+    <button data-bg="purple">Deep Space Purple</button>
+    <button data-bg="midnight">Midnight Blue</button>
+    <button data-bg="charcoal">Charcoal + Noise</button>
+    <button data-bg="teal">Cosmic Teal</button>
+    <button data-bg="light">Light Mode</button>
+  </div>
+</div>
 
+<script>
+  // Background definitions
+  const backgrounds = {
+    purple: 'radial-gradient(circle at 30% 10%, #2d1b3a 0%, #0a0a0f 100%)',
+    midnight: 'linear-gradient(145deg, #0b1a2e 0%, #030712 100%)',
+    charcoal: '#0c0c0f url("data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noise\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.005\' numOctaves=\'1\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noise)\' opacity=\'0.08\'/%3E%3C/svg%3E")',
+    teal: 'radial-gradient(circle at 70% 20%, #0d3b3a 0%, #030505 100%)',
+    light: 'linear-gradient(145deg, #f0f4fa 0%, #e2e8f0 100%)'
+  };
+
+  // Apply background and adjust text colors for light mode
+  function setBackground(key) {
+    document.body.style.background = backgrounds[key];
+    // For light mode, also adjust text color (optional – helps readability)
+    if (key === 'light') {
+      document.body.style.color = '#1e293b'; // dark text
+      // You might also want to adjust other elements, but this is enough for testing
+    } else {
+      document.body.style.color = ''; // revert to default (white)
+    }
+  }
+
+  // Add event listeners to buttons
+  document.querySelectorAll('.bg-options button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const bgKey = btn.getAttribute('data-bg');
+      setBackground(bgKey);
+    });
+  });
+
+  // Toggle switcher open/close (optional)
+  document.querySelector('.bg-toggle').addEventListener('click', () => {
+    document.querySelector('.bg-switcher').classList.toggle('open');
+  });
+</script>
 </body>
 </html>
