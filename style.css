@@ -146,10 +146,10 @@ nav a::after {
 }
 
 .resume-btn:hover {
-  background: rgba(255,255,255,0.12);
-  border-color: rgba(255,255,255,0.4);
+  background: rgba(45, 212, 191, 0.15); /* teal tint */
+  border-color: #2dd4bf;                 /* solid teal */
   transform: translateY(-3px);
-  box-shadow: 0 15px 30px -8px rgba(0,0,0,0.4);
+  box-shadow: 0 15px 30px -8px rgba(45, 212, 191, 0.3); /* teal glow */
 }
 
 /* ===== SECTIONS – Liquid Glass Cards (Apple Intelligence Style) ===== */
