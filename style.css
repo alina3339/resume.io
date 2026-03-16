@@ -366,42 +366,44 @@ footer p {
   color: rgba(255,255,255,0.5);
 }
 
-/* ===== LEFT SIDE THEME SWITCHER ===== */
-.theme-switcher-left {
+/* ===== BOTTOM‑LEFT THEME SWITCHER (TEXT LINKS) ===== */
+.theme-switcher-bottom {
   position: fixed;
+  bottom: 20px;
   left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
   z-index: 1000;
-  background: rgba(30, 35, 45, 0.3);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 40px;
-  padding: 12px 8px;
-  box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3);
-  transition: background 0.3s ease;
-}
-
-.theme-switcher-left a {
-  color: rgba(255,255,255,0.7);
-  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  padding: 6px 12px;
-  border-radius: 30px;
-  transition: all 0.3s ease;
-  text-align: center;
   font-family: 'JetBrains Mono', monospace;
+  color: rgba(255,255,255,0.5);
 }
 
-.theme-switcher-left a:hover {
-  color: #ffffff;
-  background: rgba(45, 212, 191, 0.2);
+.theme-switcher-bottom a {
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.theme-switcher-bottom a:hover {
+  color: #2dd4bf; /* teal on hover */
+}
+
+.theme-switcher-bottom .separator {
+  color: rgba(255,255,255,0.3);
+  pointer-events: none;
+}
+
+/* Light mode overrides for bottom switcher */
+body.light-mode .theme-switcher-bottom,
+body.light-mode .theme-switcher-bottom a,
+body.light-mode .theme-switcher-bottom .separator {
+  color: #475569;
+}
+
+body.light-mode .theme-switcher-bottom a:hover {
+  color: #2dd4bf;
 }
 
 /* ===== LIGHT MODE OVERRIDES – FULL TEXT INVERSION ===== */
@@ -506,20 +508,6 @@ body.light-mode .resume-btn:hover {
   color: #0f172a;
 }
 
-body.light-mode .theme-switcher-left {
-  background: rgba(255, 255, 255, 0.4);
-  border-color: rgba(255,255,255,0.8);
-}
-
-body.light-mode .theme-switcher-left a {
-  color: #1e293b;
-}
-
-body.light-mode .theme-switcher-left a:hover {
-  color: #0f172a;
-  background: rgba(45, 212, 191, 0.3);
-}
-
 /* ===== RESPONSIVE ===== */
 @media (max-width: 700px) {
   .container {
@@ -551,12 +539,9 @@ body.light-mode .theme-switcher-left a:hover {
   .modules strong {
     font-size: 22px;
   }
-  .theme-switcher-left {
+  .theme-switcher-bottom {
+    bottom: 10px;
     left: 10px;
-    padding: 8px 4px;
-  }
-  .theme-switcher-left a {
     font-size: 12px;
-    padding: 4px 8px;
   }
 }
