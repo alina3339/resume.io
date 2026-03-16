@@ -8,12 +8,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Left‑side theme switcher -->
-  <div class="theme-switcher-left">
-    <a href="#" id="theme-dark-left">Dark</a>
-    <a href="#" id="theme-light-left">Light</a>
-  </div>
-
   <div class="container">
     <header>
       <h1>Azhar A Mohammed</h1>
@@ -72,7 +66,14 @@
     </section>
 
     <footer>
-      <p>© 2026 Azhar A Mohammed</p>
+      <p>
+        © 2026 Azhar A Mohammed
+        <span class="theme-switcher-footer">
+          <a href="#" id="theme-dark-footer">Dark</a>
+          <span class="separator">/</span>
+          <a href="#" id="theme-light-footer">Light</a>
+        </span>
+      </p>
     </footer>
   </div>
 
@@ -92,13 +93,13 @@
       }
     }
 
-    // Left‑side theme links
-    document.getElementById('theme-dark-left').addEventListener('click', (e) => {
+    // Footer theme links
+    document.getElementById('theme-dark-footer').addEventListener('click', (e) => {
       e.preventDefault();
       setTheme('dark');
     });
 
-    document.getElementById('theme-light-left').addEventListener('click', (e) => {
+    document.getElementById('theme-light-footer').addEventListener('click', (e) => {
       e.preventDefault();
       setTheme('light');
     });
