@@ -8,7 +8,6 @@
 }
 
 body {
-  /* Default: Midnight Blue */
   background: linear-gradient(145deg, #0b1a2e 0%, #030712 100%);
   color: #ffffff;
   font-family: 'JetBrains Mono', monospace;
@@ -25,7 +24,6 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ===== CONTAINER ===== */
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -34,7 +32,6 @@ body {
   z-index: 2;
 }
 
-/* ===== HEADER / HERO ===== */
 header {
   margin-bottom: 80px;
   text-align: center;
@@ -66,9 +63,9 @@ h1 {
   font-size: 20px;
   color: rgba(255,255,255,0.7);
   font-weight: 300;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   border-bottom: 1px solid rgba(255,255,255,0.1);
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
@@ -76,7 +73,28 @@ h1 {
   text-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-/* ===== NAVIGATION – Plain Text Links + Teal Buttons ===== */
+/* Contact info line */
+.contact-info {
+  margin-bottom: 30px;
+  font-size: 16px;
+  color: rgba(255,255,255,0.6);
+}
+
+.contact-info a {
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #2dd4bf;
+}
+
+.contact-info .separator {
+  margin: 0 8px;
+  color: rgba(255,255,255,0.3);
+}
+
 nav {
   display: flex;
   flex-direction: column;
@@ -162,7 +180,6 @@ nav a:not(.resume-btn):hover::after {
   box-shadow: 0 15px 30px -8px rgba(45, 212, 191, 0.3);
 }
 
-/* ===== SECTIONS – Liquid Glass Cards ===== */
 section {
   background: rgba(30, 35, 45, 0.35);
   backdrop-filter: blur(25px);
@@ -261,7 +278,57 @@ p {
   text-justify: inter-word;
 }
 
-/* ===== EXPERTISE GRID ===== */
+/* ===== EXPERIENCE ===== */
+.experience-item {
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.experience-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.exp-header {
+  margin-bottom: 15px;
+}
+
+.exp-header h3 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.exp-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 16px;
+  color: rgba(255,255,255,0.6);
+}
+
+.exp-role {
+  font-weight: 500;
+  color: rgba(255,255,255,0.8);
+}
+
+.exp-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  color: rgba(255,255,255,0.5);
+}
+
+.experience-item p {
+  margin-top: 10px;
+  font-size: 17px;
+}
+
+/* ===== EXPERTISE GRID (original) ===== */
 .expertise {
   list-style: none;
   display: grid;
@@ -301,7 +368,39 @@ p {
   box-shadow: 0 20px 30px -10px rgba(0,0,0,0.5);
 }
 
-/* ===== MODULE LIST ===== */
+/* ===== SKILLS GRID (Top Skills, Languages, Certifications) ===== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.skills-column h3 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.skills-list {
+  list-style: none;
+}
+
+.skills-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  font-size: 17px;
+  color: rgba(255,255,255,0.8);
+}
+
+.skills-list li:last-child {
+  border-bottom: none;
+}
+
+/* ===== MODULE LIST (original) ===== */
 .modules {
   list-style: none;
   margin-top: 20px;
@@ -338,6 +437,32 @@ p {
   display: inline-block;
 }
 
+/* ===== EDUCATION ===== */
+.education-list {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.education-list li {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  font-size: 18px;
+  color: rgba(255,255,255,0.8);
+}
+
+.education-list li:last-child {
+  border-bottom: none;
+}
+
+.education-list strong {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 8px;
+}
+
 /* ===== FOOTER ===== */
 footer {
   margin-top: 120px;
@@ -366,17 +491,15 @@ footer p {
   color: rgba(255,255,255,0.5);
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* aligns content to the left */
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-/* ===== FOOTER THEME SWITCHER (TEXT LINKS) ===== */
 .theme-switcher-footer {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  /* margin-left: 10px;  <-- removed */
 }
 
 .theme-switcher-footer a {
@@ -386,7 +509,7 @@ footer p {
 }
 
 .theme-switcher-footer a:hover {
-  color: #2dd4bf; /* teal on hover */
+  color: #2dd4bf;
 }
 
 .theme-switcher-footer .separator {
@@ -394,7 +517,7 @@ footer p {
   pointer-events: none;
 }
 
-/* ===== LIGHT MODE OVERRIDES – FULL TEXT INVERSION ===== */
+/* ===== LIGHT MODE OVERRIDES ===== */
 body.light-mode {
   color: #1e293b;
 }
@@ -410,13 +533,24 @@ body.light-mode h1 {
 body.light-mode h1,
 body.light-mode h2,
 body.light-mode .subtitle,
+body.light-mode .contact-info,
+body.light-mode .contact-info a,
 body.light-mode nav a,
 body.light-mode .modules strong,
 body.light-mode footer,
 body.light-mode footer p,
 body.light-mode p,
 body.light-mode .expertise li,
-body.light-mode .modules li {
+body.light-mode .modules li,
+body.light-mode .skills-column h3,
+body.light-mode .skills-list li,
+body.light-mode .education-list li,
+body.light-mode .education-list strong,
+body.light-mode .exp-header h3,
+body.light-mode .exp-meta,
+body.light-mode .exp-role,
+body.light-mode .exp-date,
+body.light-mode .experience-item p {
   color: #1e293b;
 }
 
@@ -428,6 +562,14 @@ body.light-mode .subtitle {
   color: #334155;
   border-bottom-color: rgba(0,0,0,0.1);
   text-shadow: none;
+}
+
+body.light-mode .contact-info a {
+  color: #334155;
+}
+
+body.light-mode .contact-info .separator {
+  color: rgba(0,0,0,0.2);
 }
 
 body.light-mode nav a {
@@ -473,6 +615,18 @@ body.light-mode .modules strong {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+body.light-mode .skills-list li {
+  border-bottom-color: rgba(0,0,0,0.1);
+}
+
+body.light-mode .education-list li {
+  border-bottom-color: rgba(0,0,0,0.1);
+}
+
+body.light-mode .experience-item {
+  border-bottom-color: rgba(0,0,0,0.1);
 }
 
 body.light-mode footer {
@@ -536,11 +690,17 @@ body.light-mode .theme-switcher-footer a:hover {
   .modules strong {
     font-size: 22px;
   }
-  footer p {
+  .exp-meta {
     flex-direction: column;
     gap: 5px;
   }
-  .theme-switcher-footer {
-    margin-left: 0;
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  footer p {
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
   }
 }
