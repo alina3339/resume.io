@@ -364,46 +364,34 @@ footer::before {
 footer p {
   font-size: 15px;
   color: rgba(255,255,255,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-/* ===== BOTTOM‑LEFT THEME SWITCHER (TEXT LINKS) ===== */
-.theme-switcher-bottom {
-  position: fixed;
-  bottom: 120px;
-  left: 20px;
-  z-index: 1000;
+/* ===== FOOTER THEME SWITCHER (TEXT LINKS) ===== */
+.theme-switcher-footer {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 14px;
-  font-family: 'JetBrains Mono', monospace;
-  color: rgba(255,255,255,0.5);
+  margin-left: 10px;
 }
 
-.theme-switcher-bottom a {
+.theme-switcher-footer a {
   color: rgba(255,255,255,0.5);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.theme-switcher-bottom a:hover {
+.theme-switcher-footer a:hover {
   color: #2dd4bf; /* teal on hover */
 }
 
-.theme-switcher-bottom .separator {
+.theme-switcher-footer .separator {
   color: rgba(255,255,255,0.3);
   pointer-events: none;
-}
-
-/* Light mode overrides for bottom switcher */
-body.light-mode .theme-switcher-bottom,
-body.light-mode .theme-switcher-bottom a,
-body.light-mode .theme-switcher-bottom .separator {
-  color: #475569;
-}
-
-body.light-mode .theme-switcher-bottom a:hover {
-  color: #2dd4bf;
 }
 
 /* ===== LIGHT MODE OVERRIDES – FULL TEXT INVERSION ===== */
@@ -508,6 +496,15 @@ body.light-mode .resume-btn:hover {
   color: #0f172a;
 }
 
+body.light-mode .theme-switcher-footer a,
+body.light-mode .theme-switcher-footer .separator {
+  color: #475569;
+}
+
+body.light-mode .theme-switcher-footer a:hover {
+  color: #2dd4bf;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 700px) {
   .container {
@@ -539,9 +536,11 @@ body.light-mode .resume-btn:hover {
   .modules strong {
     font-size: 22px;
   }
-  .theme-switcher-bottom {
-    bottom: 10px;
-    left: 10px;
-    font-size: 12px;
+  footer p {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .theme-switcher-footer {
+    margin-left: 0;
   }
 }
