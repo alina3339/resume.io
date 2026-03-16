@@ -8,6 +8,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Left‑side theme switcher -->
+  <div class="theme-switcher-left">
+    <a href="#" id="theme-dark-left">Dark</a>
+    <a href="#" id="theme-light-left">Light</a>
+  </div>
+
   <div class="container">
     <header>
       <h1>Azhar A Mohammed</h1>
@@ -66,12 +72,7 @@
     </section>
 
     <footer>
-      <p>
-        © 2026 Azhar A Mohammed
-        <span class="theme-switcher">
-          <a href="#" id="theme-dark">Dark</a> / <a href="#" id="theme-light">Light</a>
-        </span>
-      </p>
+      <p>© 2026 Azhar A Mohammed</p>
     </footer>
   </div>
 
@@ -82,7 +83,6 @@
       light: 'linear-gradient(145deg, #f0f4fa 0%, #e2e8f0 100%)'
     };
 
-    // Apply theme and toggle light-mode class
     function setTheme(theme) {
       document.body.style.background = backgrounds[theme];
       if (theme === 'light') {
@@ -92,13 +92,13 @@
       }
     }
 
-    // Add event listeners to theme links
-    document.getElementById('theme-dark').addEventListener('click', (e) => {
+    // Left‑side theme links
+    document.getElementById('theme-dark-left').addEventListener('click', (e) => {
       e.preventDefault();
       setTheme('dark');
     });
 
-    document.getElementById('theme-light').addEventListener('click', (e) => {
+    document.getElementById('theme-light-left').addEventListener('click', (e) => {
       e.preventDefault();
       setTheme('light');
     });
