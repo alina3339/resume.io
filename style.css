@@ -8,7 +8,7 @@
 }
 
 body {
-  /* Default: Midnight Blue (set initially) */
+  /* Default: Midnight Blue */
   background: linear-gradient(145deg, #0b1a2e 0%, #030712 100%);
   color: #ffffff;
   font-family: 'JetBrains Mono', monospace;
@@ -366,21 +366,42 @@ footer p {
   color: rgba(255,255,255,0.5);
 }
 
-/* ===== THEME SWITCHER (Dark / Light text links) ===== */
-.theme-switcher {
-  margin-left: 20px;
-  font-size: 14px;
+/* ===== LEFT SIDE THEME SWITCHER ===== */
+.theme-switcher-left {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 1000;
+  background: rgba(30, 35, 45, 0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 40px;
+  padding: 12px 8px;
+  box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3);
+  transition: background 0.3s ease;
 }
 
-.theme-switcher a {
-  color: rgba(255,255,255,0.5);
+.theme-switcher-left a {
+  color: rgba(255,255,255,0.7);
   text-decoration: none;
-  transition: color 0.3s ease;
-  padding: 0 3px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 6px 12px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
 }
 
-.theme-switcher a:hover {
-  color: #2dd4bf;
+.theme-switcher-left a:hover {
+  color: #ffffff;
+  background: rgba(45, 212, 191, 0.2);
 }
 
 /* ===== LIGHT MODE OVERRIDES – FULL TEXT INVERSION ===== */
@@ -485,12 +506,18 @@ body.light-mode .resume-btn:hover {
   color: #0f172a;
 }
 
-body.light-mode .theme-switcher a {
-  color: #475569;
+body.light-mode .theme-switcher-left {
+  background: rgba(255, 255, 255, 0.4);
+  border-color: rgba(255,255,255,0.8);
 }
 
-body.light-mode .theme-switcher a:hover {
-  color: #2dd4bf;
+body.light-mode .theme-switcher-left a {
+  color: #1e293b;
+}
+
+body.light-mode .theme-switcher-left a:hover {
+  color: #0f172a;
+  background: rgba(45, 212, 191, 0.3);
 }
 
 /* ===== RESPONSIVE ===== */
@@ -523,5 +550,13 @@ body.light-mode .theme-switcher a:hover {
   }
   .modules strong {
     font-size: 22px;
+  }
+  .theme-switcher-left {
+    left: 10px;
+    padding: 8px 4px;
+  }
+  .theme-switcher-left a {
+    font-size: 12px;
+    padding: 4px 8px;
   }
 }
