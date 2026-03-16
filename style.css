@@ -376,7 +376,7 @@ footer p {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  margin-left: 10px;
+  /* margin-left: 10px;  <-- removed */
 }
 
 .theme-switcher-footer a {
