@@ -306,5 +306,55 @@
     // Set default theme to dark
     setTheme('dark');
   </script>
+  <script src="js/instantclick-3.1.0.min.js" data-no-instant></script>
+<script data-no-instant>
+  // Function to set up theme switcher
+  function initThemeSwitcher() {
+    const darkLink = document.getElementById('theme-dark-footer');
+    const lightLink = document.getElementById('theme-light-footer');
+
+    // Remove old listeners before adding new ones (clean approach)
+    if (darkLink && lightLink) {
+      // Clone and replace elements to remove all listeners (simplest)
+      const newDarkLink = darkLink.cloneNode(true);
+      const newLightLink = lightLink.cloneNode(true);
+      darkLink.parentNode.replaceChild(newDarkLink, darkLink);
+      lightLink.parentNode.replaceChild(newLightLink, lightLink);
+
+      // Add fresh listeners
+      document.getElementById('theme-dark-footer').addEventListener('click', (e) => {
+        e.preventDefault();
+        setTheme('dark');
+      });
+      document.getElementById('theme-light-footer').addEventListener('click', (e) => {
+        e.preventDefault();
+        setTheme('light');
+      });
+    }
+  }
+
+  // Theme definitions and setTheme function (keep these as they are)
+  const backgrounds = {
+    dark: 'linear-gradient(145deg, #0b1a2e 0%, #030712 100%)',
+    light: 'linear-gradient(145deg, #f0f4fa 0%, #e2e8f0 100%)'
+  };
+
+  function setTheme(theme) {
+    document.body.style.background = backgrounds[theme];
+    if (theme === 'light') {
+      document.body.classList.add('light-mode');
+    } else {
+      document.body.classList.remove('light-mode');
+    }
+  }
+
+  // Initialize InstantClick
+  InstantClick.on('change', function() {
+    initThemeSwitcher(); // Re-attach theme switcher after page load
+  });
+
+  InstantClick.init();
+  initThemeSwitcher(); // Initial setup for the first page
+</script>
 </body>
 </html>
