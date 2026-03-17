@@ -244,50 +244,64 @@
     </footer>
   </div>
 
-  <!-- InstantClick library (local or CDN) -->
-  <script src="js/instantclick-3.1.0.min.js" data-no-instant></script>
-  <script data-no-instant>
-    // Consolidated theme switcher (works with InstantClick)
-    const backgrounds = {
-      dark: 'linear-gradient(145deg, #0b1a2e 0%, #030712 100%)',
-      light: 'linear-gradient(145deg, #f0f4fa 0%, #e2e8f0 100%)'
-    };
 
-    function setTheme(theme) {
-      document.body.style.background = backgrounds[theme];
-      if (theme === 'light') {
-        document.body.classList.add('light-mode');
-      } else {
-        document.body.classList.remove('light-mode');
       }
     }
 
-    function initThemeSwitcher() {
-      const darkLink = document.getElementById('theme-dark-footer');
-      const lightLink = document.getElementById('theme-light-footer');
-      if (darkLink && lightLink) {
-        // Clone to remove old listeners
-        const newDark = darkLink.cloneNode(true);
-        const newLight = lightLink.cloneNode(true);
-        darkLink.parentNode.replaceChild(newDark, darkLink);
-        lightLink.parentNode.replaceChild(newLight, lightLink);
-        // Attach fresh listeners
-        document.getElementById('theme-dark-footer').addEventListener('click', (e) => {
-          e.preventDefault();
-          setTheme('dark');
-        });
-        document.getElementById('theme-light-footer').addEventListener('click', (e) => {
-          e.preventDefault();
-          setTheme('light');
-        });
-      }
-    }
+<!-- InstantClick from CDN (always available) -->
+<script src="https://cdn.jsdelivr.net/npm/instantclick@3.1.0/instantclick.min.js" data-no-instant></script>
 
-    // InstantClick hook
+<script data-no-instant>
+  // Theme definitions
+  const backgrounds = {
+    dark: 'linear-gradient(145deg, #0b1a2e 0%, #030712 100%)',
+    light: 'linear-gradient(145deg, #f0f4fa 0%, #e2e8f0 100%)'
+  };
+
+  function setTheme(theme) {
+    document.body.style.background = backgrounds[theme];
+    if (theme === 'light') {
+      document.body.classList.add('light-mode');
+    } else {
+      document.body.classList.remove('light-mode');
+    }
+  }
+
+  // Attach listeners directly (no cloning, simpler)
+  function initThemeSwitcher() {
+    const darkLink = document.getElementById('theme-dark-footer');
+    const lightLink = document.getElementById('theme-light-footer');
+    
+    if (darkLink && lightLink) {
+      // Remove any existing listeners by replacing with new elements
+      const newDark = darkLink.cloneNode(true);
+      const newLight = lightLink.cloneNode(true);
+      darkLink.parentNode.replaceChild(newDark, darkLink);
+      lightLink.parentNode.replaceChild(newLight, lightLink);
+
+      // Add fresh listeners
+      document.getElementById('theme-dark-footer').addEventListener('click', (e) => {
+        e.preventDefault();
+        setTheme('dark');
+      });
+      document.getElementById('theme-light-footer').addEventListener('click', (e) => {
+        e.preventDefault();
+        setTheme('light');
+      });
+    }
+  }
+
+  // Run after every InstantClick page change
+  if (typeof InstantClick !== 'undefined') {
     InstantClick.on('change', initThemeSwitcher);
     InstantClick.init();
-    initThemeSwitcher();  // initial setup
-    setTheme('dark');     // default theme
-  </script>
+  } else {
+    console.warn('InstantClick not loaded – theme switcher will work without preloading.');
+  }
+
+  // Initial setup
+  initThemeSwitcher();
+  setTheme('dark'); // default theme
+</script>
 </body>
 </html>
