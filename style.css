@@ -629,7 +629,75 @@ body.light-mode .byline::before {
   background: #2dd4bf;
 }
 
-/* Responsive */
+/* Hire-me page custom elements – light mode */
+body.light-mode .back-link {
+  color: #475569;
+}
+body.light-mode .back-link:hover {
+  color: #2dd4bf;
+}
+
+body.light-mode .hire-header p,
+body.light-mode .hire-header .subtitle {
+  color: #334155;
+}
+
+body.light-mode .service-list li {
+  color: #1e293b;
+  border-left-color: #2dd4bf;
+}
+
+body.light-mode .testimonial {
+  background: rgba(255,255,255,0.7);
+  border-color: rgba(0,0,0,0.1);
+}
+body.light-mode .testimonial p {
+  color: #1e293b;
+}
+body.light-mode .testimonial .author {
+  color: #0f172a;
+}
+
+body.light-mode .rate-card {
+  background: rgba(45,212,191,0.1);
+  border-color: rgba(45,212,191,0.3);
+}
+body.light-mode .rate-card p {
+  color: #1e293b;
+}
+body.light-mode .rate-highlight {
+  color: #0f172a;
+}
+
+body.light-mode .cta-email {
+  background: #2dd4bf;
+  color: #0f172a;
+}
+body.light-mode .cta-email:hover {
+  background: #f0f4fa;
+  color: #0f172a;
+  box-shadow: 0 20px 30px -10px rgba(45,212,191,0.3);
+}
+
+body.light-mode .intro-block p {
+  color: #1e293b;
+}
+body.light-mode .intro-block a {
+  color: #0f172a;
+}
+body.light-mode .intro-block a:hover {
+  color: #2dd4bf;
+}
+
+/* Override inline teal links in light mode */
+body.light-mode a[style*="color: #2dd4bf"] {
+  color: #0f172a !important;
+}
+body.light-mode a[style*="color: #2dd4bf"]:hover {
+  color: #2dd4bf !important;
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 700px) {
   .container {
     padding: 50px 20px;
