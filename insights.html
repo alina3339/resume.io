@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insights | Azhar A Mohammed</title>
+
+  <!-- Preconnect & fonts (same as main page) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+  <link rel="stylesheet" href="style.css?v=1.0">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <!-- Simple back link (optional) -->
+      <nav style="margin-bottom: 2rem;">
+        <a href="index.html">← Back to main</a>
+      </nav>
+      <!-- ASCII art header (like Chris Morgan) -->
+      <div class="ascii-header">## 🎨 Aa</div>
+      <h1>Thoughts & insights.</h1>
+      <p class="subtitle">Articles, notes, and occasional deep dives on NetSuite, ERP, and finance systems.</p>
+    </header>
+
+    <!-- Intro links section (styled as a simple block) -->
+    <div class="intro-links" style="margin: 2rem 0 3rem 0; padding-left: 1.5rem; border-left: 4px solid #2dd4bf;">
+      <p style="font-size: 1.2rem; margin-bottom: 0.75rem;">• You can <a href="index.html#contact">hire me</a> for consulting, training and mentoring in NetSuite and finance transformation;</p>
+      <p style="font-size: 1.2rem;">• If you're interested in ERP best practices, here are a few articles that remain popular:</p>
+    </div>
+
+    <!-- Article list (using existing expertise/modules style but adapted) -->
+    <section style="background: none; backdrop-filter: none; padding: 0; box-shadow: none; margin-bottom: 3rem;">
+      <h2 style="margin-bottom: 2rem;">Recent articles</h2>
+      <div class="article-list">
+        <div class="article-item" style="margin-bottom: 2.5rem;">
+          <h3 style="font-size: 1.8rem; font-weight: 600; margin-bottom: 0.25rem;"><a href="#" style="color: #ffffff; text-decoration: none; border-bottom: 1px solid transparent;">U+1F4BB: Clean Unicode Support in NetSuite SuiteScript</a></h3>
+          <p style="color: rgba(255,255,255,0.7); font-size: 1.1rem; margin-top: 0.3rem;">Stop worrying about character encoding issues in your scripts. Use proper Unicode handling with this elegant pattern.</p>
+        </div>
+        <div class="article-item" style="margin-bottom: 2.5rem;">
+          <h3 style="font-size: 1.8rem; font-weight: 600; margin-bottom: 0.25rem;"><a href="#" style="color: #ffffff; text-decoration: none; border-bottom: 1px solid transparent;">Don't Use CSV Imports for Everything: A Case for SuiteScript</a></h3>
+          <p style="color: rgba(255,255,255,0.7); font-size: 1.1rem; margin-top: 0.3rem;">CSV imports are great, but they're not always the right tool. Learn when to reach for SuiteScript instead.</p>
+        </div>
+        <div class="article-item" style="margin-bottom: 2.5rem;">
+          <h3 style="font-size: 1.8rem; font-weight: 600; margin-bottom: 0.25rem;"><a href="#" style="color: #ffffff; text-decoration: none; border-bottom: 1px solid transparent;">Using Git and Saved Searches for a Simple, Powerful Test Harness</a></h3>
+          <p style="color: rgba(255,255,255,0.7); font-size: 1.1rem; margin-top: 0.3rem;">People often overcomplicate testing in NetSuite. Here's a surprisingly effective approach using tools you already have.</p>
+        </div>
+      </div>
+      <a href="#" class="more-link" style="color: #2dd4bf; font-size: 1.2rem; text-decoration: none; border-bottom: 1px solid #2dd4bf;">See more articles →</a>
+    </section>
+
+    <!-- Footer with theme switcher (same as main page) -->
+    <footer style="margin-top: 5rem;">
+      <p>
+        <span class="theme-switcher-footer">
+          <a href="#" id="theme-dark-footer">Dark</a>
+          <span class="separator">/</span>
+          <a href="#" id="theme-light-footer">Light</a>
+        </span>
+        © 2026 Azhar A Mohammed
+      </p>
+    </footer>
+  </div>
+
+  <!-- InstantClick & theme switcher (same consolidated script) -->
+  <script src="https://cdn.jsdelivr.net/npm/instantclick@3.1.0/instantclick.min.js" data-no-instant></script>
+  <script data-no-instant>
+    const backgrounds = {
+      dark: 'linear-gradient(145deg, #0b1a2e 0%, #030712 100%)',
+      light: 'linear-gradient(145deg, #f0f4fa 0%, #e2e8f0 100%)'
+    };
+    function setTheme(theme) {
+      document.body.style.background = backgrounds[theme];
+      if (theme === 'light') {
+        document.body.classList.add('light-mode');
+      } else {
+        document.body.classList.remove('light-mode');
+      }
+    }
+    function initThemeSwitcher() {
+      const darkLink = document.getElementById('theme-dark-footer');
+      const lightLink = document.getElementById('theme-light-footer');
+      if (darkLink && lightLink) {
+        const newDark = darkLink.cloneNode(true);
+        const newLight = lightLink.cloneNode(true);
+        darkLink.parentNode.replaceChild(newDark, darkLink);
+        lightLink.parentNode.replaceChild(newLight, lightLink);
+        document.getElementById('theme-dark-footer').addEventListener('click', (e) => {
+          e.preventDefault();
+          setTheme('dark');
+        });
+        document.getElementById('theme-light-footer').addEventListener('click', (e) => {
+          e.preventDefault();
+          setTheme('light');
+        });
+      }
+    }
+    if (typeof InstantClick !== 'undefined') {
+      InstantClick.on('change', initThemeSwitcher);
+      InstantClick.init();
+    }
+    initThemeSwitcher();
+    setTheme('dark');
+  </script>
+</body>
+</html>
