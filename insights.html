@@ -9,11 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
     <link rel="stylesheet" href="style.css">
+    <!-- Minimal additional styles only for layout specifics -->
     <style>
-        /* Additional minimal styling for the insights page */
-        .insights-header {
-            margin-bottom: 2rem;
-        }
         .back-link {
             color: rgba(255,255,255,0.6);
             text-decoration: none;
@@ -23,25 +20,20 @@
         .back-link:hover {
             color: #2dd4bf;
         }
-        .intro-links {
+        .intro-block {
             margin: 2rem 0 3rem 0;
             padding-left: 1.5rem;
             border-left: 4px solid #2dd4bf;
         }
-        .intro-links p {
+        .intro-block p {
             font-size: 1.2rem;
             margin-bottom: 0.75rem;
-        }
-        .article-list {
-            margin-top: 2rem;
         }
         .article-item {
             margin-bottom: 2.5rem;
         }
         .article-item h3 {
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-bottom: 0.25rem;
+            margin: 0.25rem 0 0.5rem 0;
         }
         .article-item h3 a {
             color: #ffffff;
@@ -52,58 +44,55 @@
         .article-item h3 a:hover {
             border-bottom-color: #2dd4bf;
         }
-        .article-item p {
-            color: rgba(255,255,255,0.7);
-            font-size: 1.1rem;
-            margin-top: 0.3rem;
+        /* Light mode overrides */
+        body.light-mode .back-link {
+            color: #475569;
         }
-        .more-link {
+        body.light-mode .back-link:hover {
             color: #2dd4bf;
-            font-size: 1.2rem;
-            text-decoration: none;
-            border-bottom: 1px solid #2dd4bf;
-            display: inline-block;
-            margin-top: 1rem;
         }
-        .more-link:hover {
-            color: #ffffff;
-            border-bottom-color: #ffffff;
+        body.light-mode .article-item h3 a {
+            color: #1e293b;
+        }
+        body.light-mode .article-item h3 a:hover {
+            border-bottom-color: #2dd4bf;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="insights-header">
-            <a href="index.html" class="back-link">← Back to main</a>
-            <h1>Thoughts & insights.</h1>
-            <p class="subtitle" style="font-size: 1.2rem; border-bottom: none;">Articles, notes, and occasional deep dives on NetSuite, ERP, and finance systems.</p>
-        </div>
+        <a href="index.html" class="back-link">← Back to main</a>
+        
+        <h1>Thoughts & insights.</h1>
+        <p class="subtitle" style="border-bottom: none; margin-bottom: 1rem;">Articles, notes, and occasional deep dives on NetSuite, ERP, and finance systems.</p>
 
-        <div class="intro-links">
+        <div class="intro-block">
             <p>• You can <a href="hire-me.html" style="color: #2dd4bf;">hire me</a> for consulting, training and mentoring in NetSuite and finance transformation;</p>
             <p>• If you're interested in ERP best practices, here are a few articles that remain popular:</p>
         </div>
 
-        <section style="background: none; backdrop-filter: none; padding: 0; box-shadow: none; margin-bottom: 3rem;">
+        <section style="background: none; backdrop-filter: none; padding: 0; box-shadow: none;">
             <h2 style="margin-bottom: 2rem;">Recent articles</h2>
-            <div class="article-list">
-                <div class="article-item">
-                    <div class="article-meta">Mar 17, 2026 · 4 min read</div>
-                    <h3><a href="#">U+1F4BB: Clean Unicode Support in NetSuite SuiteScript</a></h3>
-                    <p>Stop worrying about character encoding issues in your scripts. Use proper Unicode handling with this elegant pattern.</p>
-                </div>
-                <div class="article-item">
-                    <div class="article-meta">Feb 28, 2026 · 5 min read</div>
-                    <h3><a href="#">Don't Use CSV Imports for Everything: A Case for SuiteScript</a></h3>
-                    <p>CSV imports are great, but they're not always the right tool. Learn when to reach for SuiteScript instead.</p>
-                </div>
-                <div class="article-item">
-                    <div class="article-meta">Feb 10, 2026 · 3 min read</div>
-                    <h3><a href="#">Using Git and Saved Searches for a Simple, Powerful Test Harness</a></h3>
-                    <p>People often overcomplicate testing in NetSuite. Here's a surprisingly effective approach using tools you already have.</p>
-                </div>
+            
+            <div class="article-item">
+                <div class="article-meta">Mar 17, 2026 · 4 min read</div>
+                <h3><a href="#">U+1F4BB: Clean Unicode Support in NetSuite SuiteScript</a></h3>
+                <p>Stop worrying about character encoding issues in your scripts. Use proper Unicode handling with this elegant pattern.</p>
             </div>
-            <a href="#" class="more-link">See more articles →</a>
+
+            <div class="article-item">
+                <div class="article-meta">Feb 28, 2026 · 5 min read</div>
+                <h3><a href="#">Don't Use CSV Imports for Everything: A Case for SuiteScript</a></h3>
+                <p>CSV imports are great, but they're not always the right tool. Learn when to reach for SuiteScript instead.</p>
+            </div>
+
+            <div class="article-item">
+                <div class="article-meta">Feb 10, 2026 · 3 min read</div>
+                <h3><a href="#">Using Git and Saved Searches for a Simple, Powerful Test Harness</a></h3>
+                <p>People often overcomplicate testing in NetSuite. Here's a surprisingly effective approach using tools you already have.</p>
+            </div>
+
+            <a href="#" class="more-link" style="color: #2dd4bf; font-size: 1.2rem; text-decoration: none; border-bottom: 1px solid #2dd4bf; display: inline-block; margin-top: 1rem;">See more articles →</a>
         </section>
 
         <footer>
@@ -118,6 +107,7 @@
         </footer>
     </div>
 
+    <!-- InstantClick & theme switcher (consolidated) -->
     <script src="https://cdn.jsdelivr.net/npm/instantclick@3.1.0/instantclick.min.js" data-no-instant></script>
     <script data-no-instant>
         const backgrounds = {
