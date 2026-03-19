@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alina3339.github.io/resume.io/sitemap.xml
