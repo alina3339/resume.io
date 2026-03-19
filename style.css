@@ -84,7 +84,7 @@ body {
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 80px 30px;
+  padding: 80px 20px;
   position: relative;
   z-index: 2;
 }
@@ -324,7 +324,7 @@ section {
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
   border-radius: 40px;
-  padding: 45px 50px;
+  padding: 45px 35px;
   margin-bottom: 60px;
   box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
@@ -393,6 +393,13 @@ section.section-plain:hover {
 .experience-item p {
   margin-top: 10px;
   font-size: 17px;
+  line-height: 1.75;
+}
+
+/* Profile section paragraph — full width, generous leading */
+#about p {
+  line-height: 1.75;
+  max-width: 100%;
 }
 
 /* ===== Expertise grid ===== */
@@ -1022,7 +1029,7 @@ body.light-mode .text-muted {
    ===================================================== */
 @media (max-width: 700px) {
   .container {
-    padding: 50px 20px;
+    padding: 50px 16px;
   }
 
   h1 {
@@ -1051,7 +1058,7 @@ body.light-mode .text-muted {
   }
 
   section {
-    padding: 30px 25px;
+    padding: 30px 20px;
     border-radius: 30px;
   }
 
