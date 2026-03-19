@@ -394,12 +394,14 @@ section.section-plain:hover {
   margin-top: 10px;
   font-size: 17px;
   line-height: 1.75;
+  text-align: justify;
 }
 
 /* Profile section paragraph — full width, generous leading */
 #about p {
   line-height: 1.75;
   max-width: 100%;
+  text-align: justify;
 }
 
 /* ===== Expertise grid ===== */
