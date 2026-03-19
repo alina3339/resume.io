@@ -566,18 +566,27 @@ footer p {
 }
 
 .theme-switcher-footer a {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.35);
   text-decoration: none;
+  font-size: 14px;
   transition: color 0.2s ease;
 }
 
 .theme-switcher-footer a:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Active theme link — clearly selected */
+.theme-switcher-footer a.active {
   color: var(--accent);
+  font-weight: 600;
+  pointer-events: none; /* no point clicking the one you're already on */
 }
 
 .theme-switcher-footer .separator {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.2);
   pointer-events: none;
+  font-size: 12px;
 }
 
 /* ===== Shared page elements ===== */
@@ -905,13 +914,20 @@ body.light-mode .resume-btn:hover {
   color: #0f172a;
 }
 
-body.light-mode .theme-switcher-footer a,
-body.light-mode .theme-switcher-footer .separator {
-  color: #475569;
+body.light-mode .theme-switcher-footer a {
+  color: rgba(0, 0, 0, 0.35);
 }
 
 body.light-mode .theme-switcher-footer a:hover {
-  color: var(--accent);
+  color: rgba(0, 0, 0, 0.75);
+}
+
+body.light-mode .theme-switcher-footer a.active {
+  color: #0f766e; /* darker teal — readable on light bg */
+}
+
+body.light-mode .theme-switcher-footer .separator {
+  color: rgba(0, 0, 0, 0.2);
 }
 
 body.light-mode .byline::before {
