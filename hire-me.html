@@ -1,241 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hire Me | Azhar A Mohammed</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Additional minimal styling for the hire-me page */
-        .hire-header {
-            margin-bottom: 2rem;
-        }
-        .hire-section {
-            margin: 3rem 0;
-        }
-        .hire-section h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-        }
-        .hire-section h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin: 2rem 0 1rem 0;
-            color: #ffffff;
-        }
-        .service-list {
-            list-style: none;
-            padding: 0;
-        }
-        .service-list li {
-            margin-bottom: 1.2rem;
-            padding-left: 1.5rem;
-            border-left: 3px solid #2dd4bf;
-            color: rgba(255,255,255,0.8);
-        }
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        .testimonial {
-            background: rgba(255,255,255,0.05);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 20px;
-            padding: 1.8rem;
-            transition: all 0.2s ease;
-        }
-        .testimonial:hover {
-            background: rgba(255,255,255,0.08);
-            transform: translateY(-3px);
-        }
-        .testimonial p {
-            font-style: italic;
-            margin-bottom: 1rem;
-            color: rgba(255,255,255,0.9);
-        }
-        .testimonial .author {
-            font-weight: 600;
-            color: #2dd4bf;
-        }
-        .rate-card {
-            background: rgba(45,212,191,0.1);
-            border: 1px solid rgba(45,212,191,0.3);
-            border-radius: 20px;
-            padding: 2rem;
-            margin: 2rem 0;
-        }
-        .rate-card p {
-            font-size: 1.2rem;
-        }
-        .rate-highlight {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #2dd4bf;
-            display: block;
-            margin: 0.5rem 0;
-        }
-        .cta-email {
-            display: inline-block;
-            background: #2dd4bf;
-            color: #0a0a0a;
-            font-weight: 600;
-            padding: 1rem 2.5rem;
-            border-radius: 40px;
-            text-decoration: none;
-            margin: 2rem 0;
-            transition: all 0.3s ease;
-        }
-        .cta-email:hover {
-            background: #ffffff;
-            transform: translateY(-3px);
-            box-shadow: 0 20px 30px -10px rgba(45,212,191,0.3);
-        }
-        .back-link {
-            color: rgba(255,255,255,0.6);
-            text-decoration: none;
-            display: inline-block;
-            margin-bottom: 2rem;
-        }
-        .back-link:hover {
-            color: #2dd4bf;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hire Me | Azhar A Mohammed</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Hire Azhar A Mohammed for NetSuite consulting, ERP transformation, and finance systems. Available remotely worldwide and in person across the UK.">
+  <meta property="og:title"       content="Hire Me | Azhar A Mohammed — NetSuite Consultant">
+  <meta property="og:description" content="NetSuite consulting, ERP transformation, training and mentoring. Available remotely worldwide and in person across the UK.">
+  <meta property="og:type"        content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+  <link rel="stylesheet" href="style.css?v=1.1">
 </head>
 <body>
-    <div class="container">
-        <div class="hire-header">
-            <a href="index.html" class="back-link">← Back to main</a>
-            <h1>Hire me for consulting, training and mentoring in Oracle NetSuite, ERP transformation and finance systems.</h1>
-            <p class="subtitle" style="font-size: 1.3rem; border-bottom: none;">Available for mentoring, training, and strategic projects.</p>
-            <p style="font-size: 1.2rem;">If you're interested in hiring me for anything, short or long, <a href="mailto:alina3339@gmail.com" class="teal-link">email me</a>. I'll normally respond within 12 hours.</p>
-        </div>
+  <div class="container">
 
-        <section class="hire-section">
-            <h2>My expertise</h2>
-            <p style="font-size: 1.2rem;">I am a certified Oracle NetSuite specialist with deep experience in ERP implementation, finance transformation, and systems integration.</p>
-            <p style="font-size: 1.2rem;">I've been working with NetSuite since 2017 and am expert in its full stack – from business analysis and scoping workflows for automation to complex multi-subsidiary rollouts and M&A integrations. I specialise in turning complex financial requirements into clean, practical solutions.</p>
-        </section>
-
-        <section class="hire-section">
-            <h2>Services offered</h2>
-            
-            <h3>Focusing on NetSuite and ERP:</h3>
-            <ul class="service-list">
-                <li><strong>Training and guidance</strong> at all levels, whether you're new to NetSuite or an experienced administrator wanting to deepen your NetSuite skills.</li>
-                <li><strong>Troubleshooting</strong> to help you figure out why something's not working – from saved searches formulas to simplifying complex workflows – and explain it clearly.</li>
-                <li><strong>Code review</strong>, especially if you're building custom Suiteflow and  SuiteScript and want to ensure it's efficient, maintainable, and follows best practices. (An hour of my time now can save you days of debugging later.)</li>
-                <li><strong>Advice on whether NetSuite is the right fit</strong> for your business needs – sometimes it is, often it's not, and honesty saves money.</li>
-                <li><strong>If you need a reliable NetSuite expert</strong>  to manage your system and deliver consistent results, I can support you across a wide range of requirements.</li>
-            </ul>
-
-            <h3>Focusing on finance transformation:</h3>
-            <ul class="service-list">
-                <li><strong>Process optimisation</strong> – analysing your current Order to Cash, Procure to Pay, and Record to Report cycles, with detailed recommendations on how to make them faster and more reliable.</li>
-                <li><strong>M&A integration planning</strong> – helping you onboard newly acquired businesses into your NetSuite environment cleanly, without disrupting operations.</li>
-                <li><strong>System architecture review</strong> – examining your entire finance applications ecosystem and suggesting improvements for data flow, automation, and reporting.</li>
-            </ul>
-        </section>
-
-        <section class="hire-section">
-            <h2>Where</h2>
-            <p>I offer my services worldwide remotely over the internet, and in person for the United Kingdom.</p>
-            <p>For on‑site visits, I'm based in Greater Stoke-on-Trent, which is in between Manchester and Birmingham cities and willing to travel across the UK for a minimum of a day's work. For longer engagements, I'm open to travel internationally – get in touch to discuss.</p>
-        </section>
-
-        <section class="hire-section">
-            <h2>How much</h2>
-            <div class="rate-card">
-                <p>My standard rate is</p>
-                <span class="rate-highlight">£150 per hour</span>
-                <p>for clients in the United Kingdom and Europe, and <strong>USD 250 per hour</strong> for the rest of the world. I round to the nearest half hour.</p>
-                <p style="margin-top: 1rem; color: rgba(255,255,255,0.6);">These rates are indicative; I reserve the right to vary them by client and project scope. I bill in arrears and accept payment by Monzo or Lloyds.</p>
-            </div>
-        </section>
-
-        <section class="hire-section">
-            <h2>Testimonials</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial">
-                    <p>"Azhar transformed our finance systems. He took our complex suitescripts and delivered a clean, automated suiteflows that our team actually enjoys using. His ability to explain technical concepts to non‑technical users is exceptional."</p>
-                    <div class="author">— Finance Director, UCAS</div>
-                </div>
-                <div class="testimonial">
-                    <p>"Working with Azhar was a game‑changer for our NetSuite remidiation. He identified bottlenecks we hadn't seen and guided our team through the optimisation process with patience and expertise. Highly recommended."</p>
-                    <div class="author">— CAO, Afiniti</div>
-                </div>
-                <div class="testimonial">
-                    <p>"Azhar's training session on system controls was the best investment we've made in our team's development. He doesn't just show you how – he explains the why behind every approach, which makes all the difference."</p>
-                    <div class="author">— IT Manager, Emma Bridgewater</div>
-                </div>
-            </div>
-        </section>
-
-        <section class="hire-section" style="text-align: center;">
-            <h2>Interested? Email me and let's talk.</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 2rem;">If you'd like to discuss a project, get advice, or just explore possibilities – drop me a line.</p>
-            <a href="mailto:alina3339@gmail.com" class="cta-email">alina3339@gmail.com</a>
-            <p style="margin-top: 2rem; color: rgba(255,255,255,0.5);">I'm available on email, and can arrange video calls via hagouts, Teams, or whatever platform suits you.</p>
-        </section>
-
-        <!-- Footer with theme switcher (same as main page) -->
-        <footer>
-              © 2026 Azhar A Mohammed
-            <p>
-                <span class="theme-switcher-footer">
-                    <a href="#" id="theme-dark-footer">Dark</a>
-                    <span class="separator">/</span>
-                    <a href="#" id="theme-light-footer">Light</a>
-                </span>
-            </p>
-        </footer>
+    <div class="hire-header">
+      <a href="index.html" class="back-link">← Back to main</a>
+      <h1>Hire me for consulting, training and mentoring in Oracle NetSuite, ERP transformation and finance systems.</h1>
+      <p class="subtitle subtitle-no-border lead">Available for mentoring, training, and strategic projects.</p>
+      <div class="hire-intro">
+        <p class="lead">If you're interested in hiring me for anything, short or long, <a href="mailto:your@email.com" class="teal-link">email me</a>. I'll normally respond within 12 hours.</p>
+      </div>
     </div>
 
-    <!-- InstantClick & theme switcher (consolidated) -->
-    <script src="https://cdn.jsdelivr.net/npm/instantclick@3.1.0/instantclick.min.js" data-no-instant></script>
-    <script data-no-instant>
-        const backgrounds = {
-            dark: 'linear-gradient(145deg, #0b1a2e 0%, #030712 100%)',
-            light: 'linear-gradient(145deg, #f0f4fa 0%, #e2e8f0 100%)'
-        };
-        function setTheme(theme) {
-            document.body.style.background = backgrounds[theme];
-            if (theme === 'light') {
-                document.body.classList.add('light-mode');
-            } else {
-                document.body.classList.remove('light-mode');
-            }
-        }
-        function initThemeSwitcher() {
-            const darkLink = document.getElementById('theme-dark-footer');
-            const lightLink = document.getElementById('theme-light-footer');
-            if (darkLink && lightLink) {
-                const newDark = darkLink.cloneNode(true);
-                const newLight = lightLink.cloneNode(true);
-                darkLink.parentNode.replaceChild(newDark, darkLink);
-                lightLink.parentNode.replaceChild(newLight, lightLink);
-                document.getElementById('theme-dark-footer').addEventListener('click', (e) => {
-                    e.preventDefault();
-                    setTheme('dark');
-                });
-                document.getElementById('theme-light-footer').addEventListener('click', (e) => {
-                    e.preventDefault();
-                    setTheme('light');
-                });
-            }
-        }
-        if (typeof InstantClick !== 'undefined') {
-            InstantClick.on('change', initThemeSwitcher);
-            InstantClick.init();
-        }
-        initThemeSwitcher();
-        setTheme('dark');
-    </script>
+    <section class="hire-section">
+      <h2>My expertise</h2>
+      <p class="lead">I am a certified Oracle NetSuite specialist with deep experience in ERP implementation, finance transformation, and systems integration.</p>
+      <p class="lead">I've been working with NetSuite since 2017 and am expert in its full stack — from business analysis and scoping workflows for automation to complex multi-subsidiary rollouts and M&A integrations. I specialise in turning complex financial requirements into clean, practical solutions.</p>
+    </section>
+
+    <section class="hire-section">
+      <h2>Services offered</h2>
+
+      <h3>Focusing on NetSuite and ERP:</h3>
+      <ul class="service-list">
+        <li><strong>Training and guidance</strong> at all levels, whether you're new to NetSuite or an experienced administrator wanting to deepen your skills.</li>
+        <li><strong>Troubleshooting</strong> to help you figure out why something's not working — from saved search formulas to simplifying complex workflows — and explain it clearly.</li>
+        <li><strong>Code review</strong>, especially if you're building custom SuiteFlow and SuiteScript and want to ensure it's efficient, maintainable, and follows best practices. An hour of my time now can save you days of debugging later.</li>
+        <li><strong>Advice on whether NetSuite is the right fit</strong> for your business needs — sometimes it is, often it's not, and honesty saves money.</li>
+        <li><strong>Ongoing NetSuite support</strong> — if you need a reliable expert to manage your system and deliver consistent results, I can support you across a wide range of requirements.</li>
+      </ul>
+
+      <h3>Focusing on finance transformation:</h3>
+      <ul class="service-list">
+        <li><strong>Process optimisation</strong> — analysing your current Order to Cash, Procure to Pay, and Record to Report cycles, with detailed recommendations on how to make them faster and more reliable.</li>
+        <li><strong>M&A integration planning</strong> — helping you onboard newly acquired businesses into your NetSuite environment cleanly, without disrupting operations.</li>
+        <li><strong>System architecture review</strong> — examining your entire finance applications ecosystem and suggesting improvements for data flow, automation, and reporting.</li>
+      </ul>
+    </section>
+
+    <section class="hire-section">
+      <h2>Where</h2>
+      <p>I offer my services worldwide remotely over the internet, and in person for the United Kingdom.</p>
+      <p>For on-site visits, I'm based in Greater Manchester, which is well-connected to both the North and Midlands, and I'm willing to travel across the UK for a minimum of a day's work. For longer engagements, I'm open to international travel — get in touch to discuss.</p>
+    </section>
+
+    <section class="hire-section">
+      <h2>How much</h2>
+      <div class="rate-card">
+        <p>My standard rate is</p>
+        <span class="rate-highlight">£150 per hour</span>
+        <p>for clients in the United Kingdom and Europe, and <strong>USD 250 per hour</strong> for the rest of the world. I round to the nearest half hour.</p>
+        <p class="rate-note">These rates are indicative; I reserve the right to vary them by client and project scope. I bill in arrears and accept payment by bank transfer.</p>
+      </div>
+    </section>
+
+    <section class="hire-section">
+      <h2>Testimonials</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial">
+          <p>"Azhar transformed our finance systems. He took our complex scripts and delivered clean, automated workflows that our team actually enjoys using. His ability to explain technical concepts to non-technical users is exceptional."</p>
+          <div class="author">— Finance Director, UCAS</div>
+        </div>
+        <div class="testimonial">
+          <p>"Working with Azhar was a game-changer for our NetSuite remediation. He identified bottlenecks we hadn't seen and guided our team through the optimisation process with patience and expertise. Highly recommended."</p>
+          <div class="author">— CAO, Afiniti</div>
+        </div>
+        <div class="testimonial">
+          <p>"Azhar's training session on system controls was the best investment we've made in our team's development. He doesn't just show you how — he explains the why behind every approach, which makes all the difference."</p>
+          <div class="author">— IT Manager, Emma Bridgewater</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hire-section" style="text-align: center;">
+      <h2>Interested? Email me and let's talk.</h2>
+      <p class="lead">If you'd like to discuss a project, get advice, or just explore possibilities — drop me a line.</p>
+      <a href="mailto:your@email.com" class="cta-email">your@email.com</a>
+      <p class="cta-footer-note">I'm available on email and can arrange video calls via Google Meet, Microsoft Teams, or whatever platform suits you.</p>
+    </section>
+
+    <footer>
+      <p>
+        <span class="theme-switcher-footer">
+          <a href="#" id="theme-dark-footer">Dark</a>
+          <span class="separator">/</span>
+          <a href="#" id="theme-light-footer">Light</a>
+        </span>
+        <span class="separator">·</span>
+        © 2026 Azhar A Mohammed
+      </p>
+    </footer>
+  </div>
+
+  <script src="instantclick.min.js" data-no-instant></script>
+  <script src="theme.js" data-no-instant></script>
 </body>
 </html>
