@@ -11,24 +11,72 @@
   <meta property="og:description" content="Certified Oracle NetSuite Specialist with deep expertise in ERP implementation, finance transformation, and systems integration.">
   <meta property="og:type"        content="website">
 
-  <!-- Fonts (single request — @import removed from CSS) -->
+  <!-- Fonts (weight 300 removed — unused) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Emoji favicon — zero extra requests -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
 
+  <!-- Preload stylesheet so browser fetches it earlier in the waterfall -->
+  <link rel="preload" href="style.css?v=1.1" as="style">
   <link rel="stylesheet" href="style.css?v=1.1">
+
+  <!-- FOUC prevention: apply saved theme before first paint -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme') || 'dark';
+        var bg = t === 'light'
+          ? 'linear-gradient(145deg,#f0f4fa 0%,#e2e8f0 100%)'
+          : 'linear-gradient(145deg,#0b1a2e 0%,#030712 100%)';
+        document.documentElement.style.background = bg;
+        if (t === 'light') document.documentElement.setAttribute('data-early-theme', 'light');
+      } catch (e) {}
+    }());
+  </script>
+
+  <!-- JSON-LD: Person schema for SEO rich results -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Azhar A Mohammed",
+    "jobTitle": "Oracle NetSuite Specialist",
+    "description": "Certified Oracle NetSuite Specialist with expertise in ERP implementation, finance transformation, and systems integration.",
+    "url": "https://alina3339.github.io/resume.io/",
+    "sameAs": [
+      "https://www.linkedin.com/in/contactmeazhar/"
+    ],
+    "knowsAbout": [
+      "Oracle NetSuite",
+      "ERP Implementation",
+      "Finance Transformation",
+      "SuiteScript",
+      "Systems Integration",
+      "Order to Cash",
+      "Procure to Pay",
+      "Record to Report"
+    ],
+    "alumniOf": [
+      {
+        "@type": "EducationalOrganization",
+        "name": "Staffordshire University"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
   <div class="container">
     <header>
       <h1>Azhar A Mohammed</h1>
       <p class="subtitle">
         Certified Oracle NetSuite Specialist | ERP & CRM Systems SME | Integrations, M&A & Finance Transformation
       </p>
-      <nav>
+      <nav aria-label="Main navigation">
         <div>
           <a href="hire-me.html">Hire Me</a>
           <a href="insights.html">Insights</a>
@@ -40,11 +88,13 @@
           <a href="#education">Education</a>
         </div>
         <div>
-          <a href="https://www.linkedin.com/in/contactmeazhar/" class="resume-btn" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="Azhar_Resume_CC_1.4-1.pdf" class="resume-btn" target="_blank" rel="noopener">Download Résumé</a>
+          <a href="https://www.linkedin.com/in/contactmeazhar/" class="resume-btn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="Azhar_Resume_CC_1.4-1.pdf" class="resume-btn" target="_blank" rel="noopener noreferrer">Download Résumé</a>
         </div>
       </nav>
     </header>
+
+    <main id="main-content">
 
     <section id="about">
       <h2>Profile</h2>
@@ -253,6 +303,8 @@
       </ul>
     </section>
 
+    </main>
+
     <footer>
       <p>
         <span class="theme-switcher-footer">
@@ -269,6 +321,6 @@
   <!-- InstantClick served locally (no CDN dependency) -->
   <script src="instantclick.min.js" data-no-instant></script>
   <!-- Shared theme switcher with localStorage persistence -->
-  <script src="theme.js" data-no-instant></script>
+  <script src="theme.js" data-no-instant defer></script>
 </body>
 </html>
