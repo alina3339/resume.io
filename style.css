@@ -5,6 +5,26 @@
 
 /* Google Fonts loaded via <link> in HTML — no @import needed here */
 
+/* ===== Skip navigation (accessibility) ===== */
+.skip-nav {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: var(--accent);
+  color: #0a0a0a;
+  padding: 0.5rem 1rem;
+  border-radius: 0 0 6px 6px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  z-index: 9999;
+  transition: top 0.2s ease;
+}
+
+.skip-nav:focus {
+  top: 0;
+}
+
 /* ----- Design tokens ----- */
 :root {
   --accent: #2dd4bf;
@@ -18,10 +38,25 @@
   --gradient-pink: linear-gradient(90deg, #ff9a9e, #fad0c4, #fad0c4, #a18cd1);
 }
 
+/* ===== Global reset ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* ===== Focus styles (keyboard navigation) ===== */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 body {
@@ -32,8 +67,13 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
-  animation: fadeIn 1s ease-out;
   transition: background 0.3s ease, color 0.2s ease;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body {
+    animation: fadeIn 1s ease-out;
+  }
 }
 
 @keyframes fadeIn {
@@ -69,8 +109,13 @@ h1 {
   margin-bottom: 15px;
   line-height: 1.2;
   filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
-  animation: floatTitle 3s ease-in-out infinite;
   will-change: transform;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  h1 {
+    animation: floatTitle 3s ease-in-out infinite;
+  }
 }
 
 @keyframes floatTitle {
@@ -283,6 +328,7 @@ section {
   margin-bottom: 60px;
   box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  contain: layout style;
 }
 
 section:hover {
@@ -1015,5 +1061,89 @@ body.light-mode .text-muted {
 
   .testimonial-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* =====================================================
+   PRINT STYLES
+   ===================================================== */
+@media print {
+  * {
+    animation: none !important;
+    transition: none !important;
+    will-change: auto !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt;
+    line-height: 1.4;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  header,
+  section,
+  footer {
+    background: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 12pt 0 !important;
+    margin-bottom: 12pt !important;
+    transform: none !important;
+  }
+
+  h1 {
+    font-size: 22pt;
+    background: none !important;
+    -webkit-text-fill-color: #000000 !important;
+    color: #000000 !important;
+    filter: none !important;
+  }
+
+  h2 {
+    font-size: 14pt;
+    color: #000000 !important;
+  }
+
+  h2::after {
+    display: none;
+  }
+
+  h3, p, li {
+    color: #000000 !important;
+  }
+
+  nav,
+  .resume-btn,
+  .skip-nav,
+  .theme-switcher-footer,
+  .cta-email,
+  footer::before {
+    display: none !important;
+  }
+
+  a {
+    color: #000000 !important;
+    text-decoration: underline;
+  }
+
+  .expertise {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @page {
+    margin: 1.5cm;
   }
 }
