@@ -400,6 +400,7 @@ section.section-plain:hover {
 #about p {
   line-height: 1.75;
   max-width: 100%;
+  text-align: justify;
 }
 
 /* ===== Expertise grid ===== */
