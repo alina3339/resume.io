@@ -84,7 +84,7 @@ body {
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 80px 20px;
+  padding: clamp(40px, 8vw, 80px) clamp(16px, 3vw, 20px);
   position: relative;
   z-index: 2;
 }
@@ -98,7 +98,7 @@ header {
 
 /* ===== Typography ===== */
 h1 {
-  font-size: 56px;
+  font-size: clamp(36px, 6vw, 56px);
   font-weight: 700;
   letter-spacing: -0.01em;
   text-transform: uppercase;
@@ -124,7 +124,7 @@ h1 {
 }
 
 h2 {
-  font-size: 32px;
+  font-size: clamp(22px, 3.5vw, 32px);
   font-weight: 600;
   letter-spacing: normal;
   text-transform: uppercase;
@@ -154,7 +154,7 @@ section:hover h2::after {
 
 h3,
 .exp-header h3 {
-  font-size: 24px;
+  font-size: clamp(18px, 2.5vw, 24px);
   font-weight: 600;
   color: #ffffff;
   margin-bottom: 5px;
@@ -162,7 +162,7 @@ h3,
 }
 
 p {
-  font-size: 18px;
+  font-size: clamp(16px, 1.8vw, 18px);
   color: rgba(255, 255, 255, 0.8);
   font-weight: 400;
   line-height: 1.6;
@@ -285,13 +285,13 @@ nav a:not(.resume-btn):hover::after {
   padding: 8px 24px;
   border-radius: 6px;
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   font-weight: 600;
   letter-spacing: 0.5px;
   position: relative;
   overflow: hidden;
-  transition: all 0.2s ease;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -320,22 +320,22 @@ nav a:not(.resume-btn):hover::after {
 /* ===== Glass sections ===== */
 section {
   background: var(--glass-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: 1px solid var(--glass-border);
-  border-radius: 40px;
-  padding: 45px 35px;
-  margin-bottom: 60px;
-  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+  border-radius: clamp(24px, 4vw, 40px);
+  padding: clamp(28px, 4vw, 45px) clamp(20px, 4vw, 35px);
+  margin-bottom: clamp(32px, 5vw, 60px);
+  box-shadow: 0 12px 28px -10px rgba(0, 0, 0, 0.45);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   contain: layout style;
 }
 
 section:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
   background: rgba(35, 40, 55, 0.4);
   border-color: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 30px 50px -15px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 20px 36px -12px rgba(0, 0, 0, 0.55);
 }
 
 /* Transparent section variant (e.g. article list) */
@@ -413,18 +413,16 @@ section.section-plain:hover {
 }
 
 .expertise li {
-  font-size: 17px;
+  font-size: clamp(15px, 1.6vw, 17px);
   font-weight: 400;
   padding: 16px 22px;
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
   border-radius: 20px;
-  transition: all 0.2s ease;
-  box-shadow: 0 8px 15px -8px rgba(0, 0, 0, 0.3);
+  transition: background 0.2s ease, transform 0.2s ease, border-left-width 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 10px -4px rgba(0, 0, 0, 0.25);
   color: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-left: 4px solid #ff9a9e; /* default; overridden per child below */
+  border-left: 4px solid #ff9a9e;
 }
 
 .expertise li:nth-child(1) { border-left-color: #ff9a9e; }
@@ -481,11 +479,11 @@ section.section-plain:hover {
 .modules li {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 28px 0 28px 15px;
-  font-size: 17px;
+  font-size: clamp(15px, 1.6vw, 17px);
   color: rgba(255, 255, 255, 0.8);
   display: flex;
   flex-direction: column;
-  transition: all 0.2s ease;
+  transition: background 0.2s ease, padding-left 0.2s ease, border-bottom-color 0.2s ease;
   border-radius: 16px;
   margin-bottom: 2px;
 }
@@ -718,12 +716,10 @@ footer p {
 
 .testimonial {
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   padding: 1.8rem;
-  transition: all 0.2s ease;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .testimonial:hover {
@@ -1028,25 +1024,46 @@ body.light-mode .text-muted {
 /* =====================================================
    RESPONSIVE
    ===================================================== */
-@media (max-width: 700px) {
-  .container {
-    padding: 50px 16px;
-  }
-
-  h1 {
-    font-size: 42px;
-  }
-
-  h2 {
-    font-size: 28px;
-  }
-
-  .subtitle {
-    font-size: 15px;
+/* =====================================================
+   RESPONSIVE — Tablet (≤900px)
+   ===================================================== */
+@media (max-width: 900px) {
+  header {
+    margin-bottom: 50px;
   }
 
   nav div {
-    gap: 15px;
+    gap: 18px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .expertise {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =====================================================
+   RESPONSIVE — Large mobile (≤600px)
+   ===================================================== */
+@media (max-width: 600px) {
+  header {
+    margin-bottom: 40px;
+  }
+
+  nav {
+    gap: 14px;
+  }
+
+  nav div {
+    gap: 12px;
   }
 
   nav a {
@@ -1054,27 +1071,30 @@ body.light-mode .text-muted {
   }
 
   .resume-btn {
-    padding: 6px 18px;
-    font-size: 14px;
-  }
-
-  section {
-    padding: 30px 20px;
-    border-radius: 30px;
-  }
-
-  .modules strong {
-    font-size: 22px;
+    padding: 6px 16px;
+    font-size: 13px;
   }
 
   .exp-meta {
     flex-direction: column;
-    gap: 5px;
+    gap: 4px;
   }
 
   .skills-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 16px;
+  }
+
+  .expertise {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modules strong {
+    font-size: clamp(18px, 5vw, 22px);
   }
 
   footer p {
@@ -1082,9 +1102,24 @@ body.light-mode .text-muted {
     gap: 5px;
     align-items: center;
   }
+}
 
-  .testimonial-grid {
-    grid-template-columns: 1fr;
+/* =====================================================
+   RESPONSIVE — Small mobile (≤380px)
+   ===================================================== */
+@media (max-width: 380px) {
+  nav div {
+    gap: 10px;
+    justify-content: flex-start;
+  }
+
+  .resume-btn {
+    padding: 5px 14px;
+    font-size: 13px;
+  }
+
+  .rate-highlight {
+    font-size: 2rem;
   }
 }
 
