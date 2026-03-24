@@ -1,94 +1,73 @@
-/* theme.js — Optimized for CSS Variables */
+/* theme.js — shared across all pages */
 
-const THEME_KEY = 'theme';
+var backgrounds = {
+  dark:  'linear-gradient(145deg, #0b1a2e 0%, #030712 100%)',
+  light: 'linear-gradient(145deg, #f0f4fa 0%, #e2e8f0 100%)'
+};
 
-/**
- * Applies the theme by toggling the class and updating UI
- */
+/* Apply theme to document and persist choice */
 function setTheme(theme) {
-  const isLight = theme === 'light';
-  
-  // 1. Toggle the class on the body (this triggers all our CSS variables)
-  document.body.classList.toggle('light-mode', isLight);
-  
-  // 2. Persist choice
-  try {
-    localStorage.setItem(THEME_KEY, theme);
-  } catch (e) {
-    console.error("LocalStorage blocked", e);
-  }
-  
+  document.body.style.background = backgrounds[theme];
+  document.body.classList.toggle('light-mode', theme === 'light');
+  try { localStorage.setItem('theme', theme); } catch (e) {}
   updateActiveLink(theme);
 }
 
-/**
- * UI visual feedback for the switcher links
- */
+/* Mark the correct switcher link as active */
 function updateActiveLink(theme) {
-  const darkLink = document.getElementById('theme-dark-footer');
-  const lightLink = document.getElementById('theme-light-footer');
-  
-  if (darkLink && lightLink) {
-    darkLink.classList.toggle('active', theme === 'dark');
-    lightLink.classList.toggle('active', theme === 'light');
-    
-    // Accessibility: tell screen readers which one is selected
-    darkLink.setAttribute('aria-pressed', theme === 'dark');
-    lightLink.setAttribute('aria-pressed', theme === 'light');
+  var darkLink  = document.getElementById('theme-dark-footer');
+  var lightLink = document.getElementById('theme-light-footer');
+  if (!darkLink || !lightLink) return;
+
+  if (theme === 'dark') {
+    darkLink.classList.add('active');
+    lightLink.classList.remove('active');
+  } else {
+    lightLink.classList.add('active');
+    darkLink.classList.remove('active');
   }
 }
 
-/**
- * Initialize listeners without cloning nodes
- */
+/* Attach click listeners, replacing nodes to clear any stale handlers */
 function initThemeSwitcher() {
-  const footer = document.querySelector('.theme-switcher-footer');
-  if (!footer) return;
+  var darkLink  = document.getElementById('theme-dark-footer');
+  var lightLink = document.getElementById('theme-light-footer');
+  if (!darkLink || !lightLink) return;
 
-  // Event Delegation: Listen once on the parent container
-  footer.addEventListener('click', (e) => {
-    const link = e.target.closest('a');
-    if (!link) return;
+  var newDark  = darkLink.cloneNode(true);
+  var newLight = lightLink.cloneNode(true);
+  darkLink.parentNode.replaceChild(newDark,  darkLink);
+  lightLink.parentNode.replaceChild(newLight, lightLink);
 
-    if (link.id === 'theme-dark-footer') {
-      e.preventDefault();
-      setTheme('dark');
-    } else if (link.id === 'theme-light-footer') {
-      e.preventDefault();
-      setTheme('light');
-    }
+  document.getElementById('theme-dark-footer').addEventListener('click', function (e) {
+    e.preventDefault();
+    setTheme('dark');
+  });
+
+  document.getElementById('theme-light-footer').addEventListener('click', function (e) {
+    e.preventDefault();
+    setTheme('light');
   });
 }
 
-/**
- * Determine and apply the saved theme
- */
+/* Read localStorage and apply — called on every page load/navigation */
 function applyStoredTheme() {
-  let saved = 'dark';
-  try {
-    // Bonus: Check system preference if no manual choice is saved
-    const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-    saved = localStorage.getItem(THEME_KEY) || (systemPrefersLight ? 'light' : 'dark');
-  } catch (e) {}
-  
+  var saved = 'dark';
+  try { saved = localStorage.getItem('theme') || 'dark'; } catch (e) {}
   setTheme(saved);
 }
 
-/* --- Execution --- */
-
-// Handle InstantClick or standard load
+/* Wire up InstantClick if available, otherwise run directly */
 if (typeof InstantClick !== 'undefined') {
-  InstantClick.on('change', () => {
+  InstantClick.on('change', function () {
     initThemeSwitcher();
     applyStoredTheme();
   });
+  InstantClick.init();
 } else {
-  // Standard load fallback
-  document.addEventListener('DOMContentLoaded', () => {
-    initThemeSwitcher();
-    applyStoredTheme();
-  });
+  console.warn('InstantClick not loaded — theme switcher will work without page preloading.');
 }
 
-// Immediate execution to prevent flickering (Optional: place this tiny line in your <head>)
+/* Initial page load */
+initThemeSwitcher();
 applyStoredTheme();

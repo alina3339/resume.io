@@ -5,100 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Insights | Azhar A Mohammed</title>
 
+  <!-- SEO -->
   <meta name="description" content="Articles, notes, and deep dives on NetSuite, ERP, and finance systems by Azhar A Mohammed — certified Oracle NetSuite Specialist.">
-  <meta property="og:title" content="Insights | Azhar A Mohammed">
-  <meta property="og:description" content="Deep dives on NetSuite, ERP, and finance systems.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://yourdomain.com/insights.html">
+  <meta property="og:title"       content="Insights | Azhar A Mohammed">
+  <meta property="og:description" content="Articles, notes, and deep dives on NetSuite, ERP, and finance systems.">
+  <meta property="og:type"        content="website">
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
-  
-  <link rel="stylesheet" href="style.css?v=1.2">
-
-  <script>
-    (function() {
-      try {
-        const saved = localStorage.getItem('theme');
-        const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-        if (saved === 'light' || (!saved && prefersLight)) {
-          document.documentElement.classList.add('light-mode');
-        }
-      } catch (e) {}
-    })();
-  </script>
+  <link rel="stylesheet" href="style.css?v=1.1">
 </head>
 <body>
-
   <div class="container">
-    <header class="insights-header">
-      <a href="index.html" class="back-link">← Back to main</a>
-      <div class="meta-caps" style="margin-top: 2rem;">Research Report 2026</div>
-      <h1 class="section-title-large">Thoughts & <span>insights.</span></h1>
-      <p class="subtitle">Detailed technical notes and occasional deep dives on NetSuite, ERP architecture, and modern finance systems.</p>
-    </header>
+    <a href="index.html" class="back-link">← Back to main</a>
+
+    <h1>Thoughts & insights.</h1>
+    <p class="subtitle subtitle-no-border">Articles, notes, and occasional deep dives on NetSuite, ERP, and finance systems.</p>
 
     <div class="intro-block">
-      <p>• Looking for expertise? You can <a href="hire-me.html">hire me</a> for NetSuite consulting, custom SuiteScript development, and finance transformation projects.</p>
-      <p>• Below is a curated collection of technical articles and ERP best practices.</p>
+      <p>• You can <a href="hire-me.html">hire me</a> for consulting, training and mentoring in NetSuite and finance transformation.</p>
+      <p>• If you're interested in ERP best practices, here are a few articles that remain popular:</p>
     </div>
 
-    <section>
-      <h2>Recent Publications</h2>
-      
-      <div class="articles-list">
-        <article class="experience-item">
-          <div class="article-meta">Mar 17, 2026 · 4 min read</div>
-          <div class="exp-header">
-            <h3><a href="#" class="article-link">💻 Clean Unicode Support in NetSuite SuiteScript</a></h3>
-          </div>
-          <p>Character encoding issues can break integrations. This pattern demonstrates how to leverage proper Unicode handling for robust, multi-language scripts.</p>
-        </article>
+    <section class="section-plain">
+      <h2>Recent articles</h2>
 
-        <article class="experience-item">
-          <div class="article-meta">Feb 28, 2026 · 5 min read</div>
-          <div class="exp-header">
-            <h3><a href="#" class="article-link">📦 The Case for SuiteScript Over CSV Imports</a></h3>
-          </div>
-          <p>While CSV imports are a staple, they lack logic and validation. Learn the specific architectural thresholds that signal it's time to switch to a scripted approach.</p>
-        </article>
-
-        <article class="experience-item">
-          <div class="article-meta">Feb 10, 2026 · 3 min read</div>
-          <div class="exp-header">
-            <h3><a href="#" class="article-link">🛠️ Git-Powered Test Harness for Saved Searches</a></h3>
-          </div>
-          <p>Don't overcomplicate your QA. Discover a simple yet powerful workflow for version-controlling your business logic using Git and NetSuite's native tools.</p>
-        </article>
+      <div class="article-item">
+        <div class="article-meta">Mar 17, 2026 · 4 min read</div>
+        <h3><a href="#">U+1F4BB: Clean Unicode Support in NetSuite SuiteScript</a></h3>
+        <p>Stop worrying about character encoding issues in your scripts. Use proper Unicode handling with this elegant pattern.</p>
       </div>
 
-      <div style="margin-top: 2rem; text-align: right;">
-        <a href="#" class="resume-btn">Archive Index →</a>
+      <div class="article-item">
+        <div class="article-meta">Feb 28, 2026 · 5 min read</div>
+        <h3><a href="#">Don't Use CSV Imports for Everything: A Case for SuiteScript</a></h3>
+        <p>CSV imports are great, but they're not always the right tool. Learn when to reach for SuiteScript instead.</p>
       </div>
+
+      <div class="article-item">
+        <div class="article-meta">Feb 10, 2026 · 3 min read</div>
+        <h3><a href="#">Using Git and Saved Searches for a Simple, Powerful Test Harness</a></h3>
+        <p>People often overcomplicate testing in NetSuite. Here's a surprisingly effective approach using tools you already have.</p>
+      </div>
+
+      <a href="#" class="more-link">See more articles →</a>
     </section>
 
     <footer>
-      <p>© 2026 Azhar A Mohammed <span class="separator">|</span> Specialist Oracle NetSuite Consultant</p>
-      <div class="theme-switcher-footer" style="margin-top: 15px;">
-        <a href="#" id="theme-dark-footer">Dark Mode</a>
-        <span class="separator">/</span>
-        <a href="#" id="theme-light-footer">Light Mode</a>
-      </div>
+       © 2026 Azhar A Mohammed
+      <p>
+        <span class="theme-switcher-footer">
+          <a href="#" id="theme-dark-footer">Dark</a>
+          <span class="separator">/</span>
+          <a href="#" id="theme-light-footer">Light</a>
+        </span>
+      </p>
     </footer>
   </div>
 
   <script src="instantclick.min.js" data-no-instant></script>
   <script src="theme.js" data-no-instant></script>
-  
-  <script data-no-instant>
-    /* Ensure InstantClick initiates with a reasonable hover delay */
-    if (typeof InstantClick !== 'undefined') {
-      InstantClick.init(50); 
-    }
-  </script>
-
 </body>
 </html>

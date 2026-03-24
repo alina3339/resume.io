@@ -4,29 +4,82 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Azhar A Mohammed | Oracle NetSuite Specialist</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+
+  <!-- SEO -->
+  <meta name="description" content="Azhar A Mohammed — Certified Oracle NetSuite Specialist with deep expertise in ERP implementation, finance transformation, and systems integration. Based in Greater Manchester, UK.">
+  <meta property="og:title"       content="Azhar A Mohammed | Oracle NetSuite Specialist">
+  <meta property="og:description" content="Certified Oracle NetSuite Specialist with deep expertise in ERP implementation, finance transformation, and systems integration.">
+  <meta property="og:type"        content="website">
+
+  <!-- Fonts (weight 300 removed — unused) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Emoji favicon — zero extra requests -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+
+  <!-- Preload stylesheet so browser fetches it earlier in the waterfall -->
+  <link rel="preload" href="style.css?v=1.1" as="style">
+  <link rel="stylesheet" href="style.css?v=1.1">
+
+  <!-- FOUC prevention: apply saved theme before first paint -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme') || 'dark';
+        var bg = t === 'light'
+          ? 'linear-gradient(145deg,#f0f4fa 0%,#e2e8f0 100%)'
+          : 'linear-gradient(145deg,#0b1a2e 0%,#030712 100%)';
+        document.documentElement.style.background = bg;
+        if (t === 'light') document.documentElement.setAttribute('data-early-theme', 'light');
+      } catch (e) {}
+    }());
+  </script>
+
+  <!-- JSON-LD: Person schema for SEO rich results -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Azhar A Mohammed",
+    "jobTitle": "Oracle NetSuite Specialist",
+    "description": "Certified Oracle NetSuite Specialist with expertise in ERP implementation, finance transformation, and systems integration.",
+    "url": "https://alina3339.github.io/resume.io/",
+    "sameAs": [
+      "https://www.linkedin.com/in/contactmeazhar/"
+    ],
+    "knowsAbout": [
+      "Oracle NetSuite",
+      "ERP Implementation",
+      "Finance Transformation",
+      "SuiteScript",
+      "Systems Integration",
+      "Order to Cash",
+      "Procure to Pay",
+      "Record to Report"
+    ],
+    "alumniOf": [
+      {
+        "@type": "EducationalOrganization",
+        "name": "Staffordshire University"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
   <div class="container">
     <header>
       <h1>Azhar A Mohammed</h1>
       <p class="subtitle">
         Certified Oracle NetSuite Specialist | ERP & CRM Systems SME | Integrations, M&A & Finance Transformation
       </p>
-      <!-- Contact info line -->
-     <!------------ <div class="contact-info">
-        <a href="mailto:alina3339@gmail.com">alina3339@gmail.com</a>
-        <span class="separator">•</span>
-        <a href="https://www.linkedin.com/in/contactmeazhar" target="_blank" rel="noopener">LinkedIn</a>
-        <span class="separator">•</span>
-        <a href="https://alina3339.github.io/resume.io/" target="_blank" rel="noopener">Portfolio</a>
-        <span class="separator">•</span>
-        <a href="https://alina3339.github.io/resume.io/Azhar_Resume_CC_1.4-1.pdf" target="_blank" rel="noopener">Blog</a>
-      </div>-------->
-      <nav>
+      <nav aria-label="Main navigation">
         <div>
           <a href="hire-me.html">Hire Me</a>
+          <a href="insights.html">Insights</a>
           <a href="#about">About</a>
           <a href="#experience">Experience</a>
           <a href="#expertise">Expertise</a>
@@ -35,21 +88,19 @@
           <a href="#education">Education</a>
         </div>
         <div>
-          <a href="https://www.linkedin.com/in/contactmeazhar/" class="resume-btn" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="Azhar_Resume_CC_1.4-1.pdf" class="resume-btn" target="_blank">Download Résumé</a>
+          <a href="https://www.linkedin.com/in/contactmeazhar/" class="resume-btn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="Azhar_Resume_CC_1.4-1.pdf" class="resume-btn" target="_blank" rel="noopener noreferrer">Download Résumé</a>
         </div>
       </nav>
     </header>
 
-    <!-- Profile / About -->
+    <main id="main-content">
+
     <section id="about">
       <h2>Profile</h2>
-      <p>
-        As a certified Oracle NetSuite specialist, I help organisations and enterprises turn their finance and operational platforms from sources of quiet frustration into instruments of confidence and momentum. I help finance leaders distil complex, competing ideas into a clear, practical solutions, then I design, build, and stabilise it in NetSuite with measurable outcomes.
-      </p>
+      <p>As a certified Oracle NetSuite specialist, I help organisations and enterprises turn their finance and operational platforms from sources of quiet frustration into instruments of confidence and momentum. I help finance leaders distil complex, competing ideas into clear, practical solutions, then I design, build, and stabilise it in NetSuite with measurable outcomes.</p>
     </section>
 
-    <!-- Experience -->
     <section id="experience">
       <h2>Experience</h2>
 
@@ -61,7 +112,7 @@
             <span class="exp-date">January 2026 – Present</span>
           </div>
         </div>
-        <p>I’m part of the team responsible for supporting and continuously improving ClearCourse’s finance systems, with a strong bias for clarity: well-defined requirements, controlled deployments, and documentation that people actually use. Working under the leadership of the NetSuite Systems Manager and the Group Head of ERP & Finance Transformation, my role spans NetSuite optimisation, integrations, onboarding newly acquired businesses along with data migration, and acting as an escalation point across core finance processes and shared services, Order to Cash (O2C), Procure to Pay (P2P), and Record to Report (R2R).</p>
+        <p>I'm part of the team responsible for supporting and continuously improving ClearCourse's finance systems, with a strong bias for clarity: well-defined requirements, controlled deployments, and documentation that people actually use. Working under the leadership of the NetSuite Systems Manager and the Group Head of ERP & Finance Transformation, my role spans NetSuite optimisation, integrations, onboarding newly acquired businesses along with data migration, and acting as an escalation point across core finance processes and shared services — Order to Cash (O2C), Procure to Pay (P2P), and Record to Report (R2R).</p>
       </div>
 
       <div class="experience-item">
@@ -72,7 +123,7 @@
             <span class="exp-date">August 2024 – January 2026</span>
           </div>
         </div>
-        <p>As the Senior Manager and ERP Administrator at Afiniti, I am the custodian of the company's business-critical finance systems. Reporting to the Chief Accounting Officer, my role is to ensure the integrity and strategic alignment of our entire finance applications ecosystem. Beyond the technical sphere, I act as a trusted partner to senior leadership. A significant part of my role is fostering a cohesive operational dialogue across our global teams in North America, Central Europe, and South Asia. This is the work of building alliances, ensuring that our systems and strategies are unified, understood, and effectively leveraged across continents.</p>
+        <p>As the Senior Manager and ERP Administrator at Afiniti, I was the custodian of the company's business-critical finance systems. Reporting to the Chief Accounting Officer, my role was to ensure the integrity and strategic alignment of our entire finance applications ecosystem. Beyond the technical sphere, I acted as a trusted partner to senior leadership. A significant part of my role was fostering a cohesive operational dialogue across our global teams in North America, Central Europe, and South Asia — the work of building alliances, ensuring that our systems and strategies were unified, understood, and effectively leveraged across continents.</p>
       </div>
 
       <div class="experience-item">
@@ -80,32 +131,32 @@
           <h3>UCAS - Helping young adults aspire for higher education and apprenticeships</h3>
           <div class="exp-meta">
             <span class="exp-role">ERP Systems Accountant | Finance Automation & Enterprise Data</span>
-            <span class="exp-date">June 2022 – July 2024 </span>
+            <span class="exp-date">June 2022 – July 2024</span>
           </div>
         </div>
-        <p>In my capacity as the Systems Accountant at UCAS, I served as the steward of the organisation's financial systems, responsible for their architectural integrity and operational harmony. My primary function was to orchestrate a complex ecosystem of applications, uniting CRM, tax, and payment platforms with Oracle NetSuite and Adaptive Planning and Budgeting system. The objective was not just to integrate these systems, but to ensure a seamless and coherent flow of data, creating a single source of truth upon which the business could rely with absolute confidence. A cornerstone of this work was a deep commitment to master data governance; through meticulous audits and reconciliations, I ensured our foundational data remained pure and synchronised. I guided the evolution of our systems through key upgrades, from architecting detailed test plans to coordinating vendors and supporting go-live deployments. This technical discipline was always paired with a human-centric focus on process improvement, a continuous search for more intelligent and elegant ways for the business to operate. Supporting UCAS's Media and Charity legal entities, I collaborated closely with the Senior Finance Manager, Tax Accountant, and the FP&A team to drive transformation projects, develop robust procedures, and train our finance teams. This created a network of alliances dedicated to system integrity. Ultimately, my position existed at the vital intersection of finance and technology. It was a role defined by a dual purpose: to maintain the silent, reliable efficiency of our core systems while consistently championing the cause for smarter, more insightful ways of working.</p>
+        <p>In my capacity as the Systems Accountant at UCAS, I served as the steward of the organisation's financial systems, responsible for their architectural integrity and operational harmony. My primary function was to orchestrate a complex ecosystem of applications, uniting CRM, tax, and payment platforms with Oracle NetSuite and Adaptive Planning and Budgeting. The objective was not just to integrate these systems, but to ensure a seamless and coherent flow of data — a single source of truth upon which the business could rely with absolute confidence. A cornerstone of this work was a deep commitment to master data governance; through meticulous audits and reconciliations, I ensured our foundational data remained pure and synchronised. I guided the evolution of our systems through key upgrades, from architecting detailed test plans to coordinating vendors and supporting go-live deployments. Supporting UCAS's Media and Charity legal entities, I collaborated closely with the Senior Finance Manager, Tax Accountant, and the FP&A team to drive transformation projects, develop robust procedures, and train our finance teams.</p>
       </div>
 
       <div class="experience-item">
         <div class="exp-header">
-          <h3>NoBlue (screen of death)</h3>
+          <h3>NoBlue Ltd.</h3>
           <div class="exp-meta">
             <span class="exp-role">NetSuite Revenue Recognition Specialist | Financial Reporting | Compliance and Audit</span>
-            <span class="exp-date">October 2020 – June 2022 </span>
+            <span class="exp-date">October 2020 – June 2022</span>
           </div>
         </div>
-        <p>As a NetSuite Revenue Recognition Specialist, I partnered with the Director of the ERP practice at NoBlue to implement strategic ERP solutions for a leading software provider specialising in educational institutions across the UK and Europe. In this role, I oversaw the entire revenue recognition process using Advanced Revenue Management (ARM) for education-based clients. My focus was on executing solutions that not only met the unique financial reporting requirements of the education sector but also significantly enhanced the client's operational efficiency. I led the complex extraction and transformation of financial data from CRM systems like Salesforce, Hubspot, and Snowflake. I meticulously mapped key data fields from sales orders, invoices, and credit memos to ensure a flawless import into Oracle NetSuite. This foundational work was critical for enabling accurate revenue recognition and robust financial reporting. Throughout the project lifecycle, I used Jira to track tasks and milestones, ensuring on-time delivery. I also created comprehensive process documentation in Confluence, detailing data import protocols, revenue recognition configurations, and compliance frameworks. And we had an excellent project manager!</p>
+        <p>As a NetSuite Revenue Recognition Specialist, I partnered with the Director of the ERP practice at NoBlue to implement strategic ERP solutions for a leading software provider specialising in educational institutions across the UK and Europe. I oversaw the entire revenue recognition process using Advanced Revenue Management (ARM) for education-based clients, focused on executing solutions that met the unique financial reporting requirements of the education sector while significantly enhancing operational efficiency. I led the complex extraction and transformation of financial data from CRM systems including Salesforce, HubSpot, and Snowflake, meticulously mapping key data fields from sales orders, invoices, and credit memos to ensure a flawless import into Oracle NetSuite. Throughout the project lifecycle, I used Jira to track tasks and milestones and created comprehensive process documentation in Confluence, detailing data import protocols, revenue recognition configurations, and compliance frameworks.</p>
       </div>
 
       <div class="experience-item">
         <div class="exp-header">
-          <h3>NoBlue (screen of death)</h3>
+          <h3>NoBlue Ltd.</h3>
           <div class="exp-meta">
             <span class="exp-role">ERP Professional Services Consultant | ERP Implementation | Business Process Optimisation</span>
             <span class="exp-date">July 2019 – June 2022</span>
           </div>
         </div>
-        <p>As a Professional Services Consultant, I managed a designated client portfolio, providing strategic optimisation and technical support solutions. My core responsibilities included designing and implementing innovative solutions to complex business challenges while acting as the primary point of contact for all client communications and relationship management. I demonstrated advanced expertise in NetSuite functionalities, mentoring junior consultants and contributing to key internal improvement initiatives. My comprehensive understanding of the platform allowed me to successfully navigate all project phases, from business analysis and architecture to configuration, testing, training, and deployment. Furthermore, I supported the sales team by providing technical expertise for client calls, conducting product demonstrations, and assisting in the development of proposals and RFPs. My contributions were instrumental in securing new business acquisitions and expanding the company's client base.</p>
+        <p>As a Professional Services Consultant, I managed a designated client portfolio, providing strategic optimisation and technical support solutions. My core responsibilities included designing and implementing innovative solutions to complex business challenges while acting as the primary point of contact for all client communications. I demonstrated advanced expertise in NetSuite functionalities, mentoring junior consultants and contributing to key internal improvement initiatives. My comprehensive understanding of the platform allowed me to successfully navigate all project phases, from business analysis and architecture to configuration, testing, training, and deployment. I also supported the sales team by providing technical expertise for client calls, conducting product demonstrations, and assisting in the development of proposals and RFPs.</p>
       </div>
 
       <div class="experience-item">
@@ -166,11 +217,11 @@
         <div class="exp-header">
           <h3>Cloud Networks</h3>
           <div class="exp-meta">
-            <span class="exp-role">Faculty/Administrator</span>
+            <span class="exp-role">Faculty / Administrator</span>
             <span class="exp-date">March 2012 – March 2013</span>
           </div>
         </div>
-        <p>Vishakhapatnam, India.</p>
+        <p>Visakhapatnam, India</p>
       </div>
 
       <div class="experience-item">
@@ -181,11 +232,10 @@
             <span class="exp-date">May 2009 – August 2012</span>
           </div>
         </div>
-        <p>Vishakhapatnam, India.</p>
+        <p>Visakhapatnam, India</p>
       </div>
     </section>
 
-    <!-- Core Expertise (original) -->
     <section id="expertise">
       <h2>Core Expertise</h2>
       <ul class="expertise">
@@ -198,7 +248,6 @@
       </ul>
     </section>
 
-    <!-- Skills & Certifications (Top Skills, Languages, Certs) -->
     <section id="skills">
       <h2>Skills & Certifications</h2>
       <div class="skills-grid">
@@ -208,7 +257,7 @@
             <li>Oracle NetSuite</li>
             <li>Consulting</li>
             <li>Finance and Accounting</li>
-            <li>NetSuite Adminstration</li>
+            <li>NetSuite Administration</li>
           </ul>
         </div>
         <div class="skills-column">
@@ -222,52 +271,44 @@
         <div class="skills-column">
           <h3>Certifications</h3>
           <ul class="skills-list">
-            <li>Netsuite Certified SuiteFoundation</li>
-            <li>Netsuite Certified ERP Consultant</li>
-            <li>Netsuite Certified ERP Administrator</li>
+            <li>NetSuite Certified SuiteFoundation</li>
+            <li>NetSuite Certified ERP Consultant</li>
+            <li>NetSuite Certified ERP Administrator</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- NetSuite Modules (original) -->
     <section id="modules">
       <h2>NetSuite Modules</h2>
       <ul class="modules">
-        <li><strong>Order to Cash</strong> Customer A/R • Dunning Letters • Customer Statements • Payment Gateway Processing</li>
-        <li><strong>Procure to Pay</strong> 3-Way Matching • Purchase Order Approvals • Supplier Management • Electronic Bank Payments</li>
-        <li><strong>Supply Chain Management</strong> Inventory Management • Bin Management • Drop Shipment • Special Orders</li>
-        <li><strong>Record to Report</strong> Subsidiary Management • Intercompany Transactions • Chart of Accounts • General Ledger</li>
-        <li><strong>Manufacturing</strong> Assembly Items • Work Orders • BOM & Component Management</li>
-        <li><strong>CRM</strong> Sales Force Automation • Marketing Automation • Support Case Management</li>
-        <li><strong>Customisation</strong> SuiteScript • Workflows • Custom Records • SuiteBundler • SuiteBuilder</li>
-        <li><strong>Administration</strong> Performance Monitoring • CSV Imports • ERP/CRM Data Loads • Release Preview Testing</li>
-        <li><strong>Retail</strong> Transaction Processing • Item Management • Payment Processing • Mass Updates</li>
+        <li><strong>Order to Cash</strong> Customer A/R · Dunning Letters · Customer Statements · Payment Gateway Processing</li>
+        <li><strong>Procure to Pay</strong> 3-Way Matching · Purchase Order Approvals · Supplier Management · Electronic Bank Payments</li>
+        <li><strong>Supply Chain Management</strong> Inventory Management · Bin Management · Drop Shipment · Special Orders</li>
+        <li><strong>Record to Report</strong> Subsidiary Management · Intercompany Transactions · Chart of Accounts · General Ledger</li>
+        <li><strong>Manufacturing</strong> Assembly Items · Work Orders · BOM & Component Management</li>
+        <li><strong>CRM</strong> Sales Force Automation · Marketing Automation · Support Case Management</li>
+        <li><strong>Customisation</strong> SuiteScript · SuiteFlow · Custom Records · SuiteBundler · SuiteBuilder</li>
+        <li><strong>Administration</strong> Performance Monitoring · CSV Imports · ERP/CRM Data Loads · Release Preview Testing</li>
+        <li><strong>Retail</strong> Transaction Processing · Item Management · Payment Processing · Mass Updates</li>
       </ul>
     </section>
 
-    <!-- Education -->
     <section id="education">
       <h2>Education</h2>
       <ul class="education-list">
-        <li>
-          <strong>Staffordshire University</strong><br>
-          Master's Degree, Computer Networks and Security · (2013 - 2015)
-        </li>
-        <li>
-          <strong>Jawaharlal Nehru Technological University</strong><br>
-          Bachelor of Technology (B.Tech.), Computer Science · (2009 - 2012)
-        </li>
-        <li>
-          <strong>Pereira English Nobel School</strong><br>
-          High School · (1994 - 2006)
-        </li>
+        <li><strong>Staffordshire University</strong><br>Master's Degree, Computer Networks and Security · (2013 – 2015)</li>
+        <li><strong>Jawaharlal Nehru Technological University</strong><br>Bachelor of Technology (B.Tech.), Computer Science · (2009 – 2012)</li>
+        <li><strong>Pereira English Nobel School</strong><br>High School · (1994 – 2006)</li>
       </ul>
     </section>
 
+    </main>
+
     <footer>
-        © 2026 Azhar A Mohammed
+         © 2026 Azhar A Mohammed
       <p>
+      
         <span class="theme-switcher-footer">
           <a href="#" id="theme-dark-footer">Dark</a>
           <span class="separator">/</span>
@@ -277,85 +318,9 @@
     </footer>
   </div>
 
-  <script>
-    // Theme definitions
-    const backgrounds = {
-      dark: 'linear-gradient(145deg, #0b1a2e 0%, #030712 100%)',
-      light: 'linear-gradient(145deg, #f0f4fa 0%, #e2e8f0 100%)'
-    };
-
-    function setTheme(theme) {
-      document.body.style.background = backgrounds[theme];
-      if (theme === 'light') {
-        document.body.classList.add('light-mode');
-      } else {
-        document.body.classList.remove('light-mode');
-      }
-    }
-
-    // Footer theme links
-    document.getElementById('theme-dark-footer').addEventListener('click', (e) => {
-      e.preventDefault();
-      setTheme('dark');
-    });
-
-    document.getElementById('theme-light-footer').addEventListener('click', (e) => {
-      e.preventDefault();
-      setTheme('light');
-    });
-
-    // Set default theme to dark
-    setTheme('dark');
-  </script>
-  <script src="js/instantclick-3.1.0.min.js" data-no-instant></script>
-<script data-no-instant>
-  // Function to set up theme switcher
-  function initThemeSwitcher() {
-    const darkLink = document.getElementById('theme-dark-footer');
-    const lightLink = document.getElementById('theme-light-footer');
-
-    // Remove old listeners before adding new ones (clean approach)
-    if (darkLink && lightLink) {
-      // Clone and replace elements to remove all listeners (simplest)
-      const newDarkLink = darkLink.cloneNode(true);
-      const newLightLink = lightLink.cloneNode(true);
-      darkLink.parentNode.replaceChild(newDarkLink, darkLink);
-      lightLink.parentNode.replaceChild(newLightLink, lightLink);
-
-      // Add fresh listeners
-      document.getElementById('theme-dark-footer').addEventListener('click', (e) => {
-        e.preventDefault();
-        setTheme('dark');
-      });
-      document.getElementById('theme-light-footer').addEventListener('click', (e) => {
-        e.preventDefault();
-        setTheme('light');
-      });
-    }
-  }
-
-  // Theme definitions and setTheme function (keep these as they are)
-  const backgrounds = {
-    dark: 'linear-gradient(145deg, #0b1a2e 0%, #030712 100%)',
-    light: 'linear-gradient(145deg, #f0f4fa 0%, #e2e8f0 100%)'
-  };
-
-  function setTheme(theme) {
-    document.body.style.background = backgrounds[theme];
-    if (theme === 'light') {
-      document.body.classList.add('light-mode');
-    } else {
-      document.body.classList.remove('light-mode');
-    }
-  }
-
-  // Initialize InstantClick
-  InstantClick.on('change', function() {
-    initThemeSwitcher(); // Re-attach theme switcher after page load
-  });
-
-  InstantClick.init();
-  initThemeSwitcher(); // Initial setup for the first page
-</script>
+  <!-- InstantClick served locally (no CDN dependency) -->
+  <script src="instantclick.min.js" data-no-instant></script>
+  <!-- Shared theme switcher with localStorage persistence -->
+  <script src="theme.js" data-no-instant defer></script>
 </body>
 </html>
