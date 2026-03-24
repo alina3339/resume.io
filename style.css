@@ -1,6 +1,6 @@
 /* =====================================================
-   Azhar A Mohammed — Portfolio CSS  v1.1
-   Google‑style typography + glass theme
+   Azhar A Mohammed — Portfolio CSS  v1.2
+   Google‑style typography + glass theme + pattern overlay
    ===================================================== */
 
 /* Google Fonts loaded via <link> in HTML — no @import needed here */
@@ -61,6 +61,11 @@ button:focus-visible {
 
 body {
   background: linear-gradient(145deg, #0b1a2e 0%, #030712 100%);
+  /* subtle pattern overlay — like the research report image */
+  background-image: 
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 2px, transparent 2px, transparent 8px),
+    repeating-linear-gradient(135deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 2px, transparent 2px, transparent 8px);
+  background-blend-mode: overlay;
   color: #ffffff;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
@@ -795,6 +800,12 @@ footer p {
    LIGHT MODE OVERRIDES
    ===================================================== */
 body.light-mode {
+  background: linear-gradient(145deg, #f0f4fa 0%, #e2e8f0 100%);
+  /* pattern overlay — dark dots for light background */
+  background-image: 
+    repeating-linear-gradient(45deg, rgba(0,0,0,0.02) 0px, rgba(0,0,0,0.02) 2px, transparent 2px, transparent 8px),
+    repeating-linear-gradient(135deg, rgba(0,0,0,0.02) 0px, rgba(0,0,0,0.02) 2px, transparent 2px, transparent 8px);
+  background-blend-mode: overlay;
   color: #1e293b;
 }
 
