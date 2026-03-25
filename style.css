@@ -1,4 +1,4 @@
-/* ===== Minimalist Harvard‑inspired style ===== */
+/*! Minimalist design – serif headings, sans body, clean spacing */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap');
 
 * {
@@ -24,7 +24,7 @@ body {
 }
 
 /* ===== TYPOGRAPHY ===== */
-h1, h2, h3, .exp-header h3, .skills-column h3, .modules strong, .education-list strong {
+h1, h2, h3 {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 600;
   letter-spacing: -0.01em;
@@ -50,8 +50,7 @@ h2 {
 
 h3 {
   font-size: 28px;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin: 32px 0 16px 0;
   color: #1e2a3a;
 }
 
@@ -62,6 +61,11 @@ p {
   margin-bottom: 1rem;
 }
 
+.lead {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
 .subtitle {
   font-size: 20px;
   font-weight: 400;
@@ -69,7 +73,14 @@ p {
   text-align: center;
   max-width: 700px;
   margin: 0 auto 48px auto;
-  line-height: 1.5;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 20px;
+}
+
+.subtitle-no-border {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 /* ===== NAVIGATION ===== */
@@ -115,148 +126,117 @@ nav a:hover {
   transform: translateY(-1px);
 }
 
-/* ===== SECTIONS ===== */
-section {
-  margin-bottom: 80px;
-  scroll-margin-top: 32px;
+/* ===== BACK LINK (used on hire-me page) ===== */
+.back-link {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: #475569;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+.back-link:hover {
+  border-bottom-color: #b78c3c;
+  color: #b78c3c;
 }
 
-/* Experience items */
-.experience-item {
-  margin-bottom: 48px;
-  padding-bottom: 32px;
-  border-bottom: 1px solid #e2e8f0;
+/* ===== HIRE ME PAGE SPECIFIC ===== */
+.hire-header {
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
-.experience-item:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.exp-header {
-  margin-bottom: 16px;
-}
-
-.exp-meta {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: baseline;
-  font-size: 16px;
-  color: #64748b;
-  margin-top: 8px;
-}
-
-.exp-role {
-  font-weight: 500;
-  color: #334155;
-}
-
-.exp-date {
-  font-size: 15px;
-}
-
-/* Expertise grid – clean cards */
-.expertise {
+.service-list {
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 24px;
-  margin-top: 32px;
+  padding: 0;
+  margin: 1.5rem 0;
 }
 
-.expertise li {
-  background: #ffffff;
+.service-list li {
+  margin-bottom: 1.2rem;
+  padding-left: 1.5rem;
+  border-left: 3px solid #b78c3c;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.testimonial {
+  background: white;
   border: 1px solid #e2e8f0;
   border-radius: 20px;
-  padding: 24px;
-  font-size: 18px;
-  font-weight: 500;
-  text-align: center;
+  padding: 1.8rem;
   transition: all 0.2s ease;
   box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
-.expertise li:hover {
+.testimonial:hover {
   transform: translateY(-4px);
   box-shadow: 0 20px 25px -12px rgba(0,0,0,0.1);
   border-color: #cbd5e1;
 }
 
-/* Skills grid */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 48px;
-  margin-top: 32px;
+.testimonial p {
+  font-style: italic;
+  margin-bottom: 1rem;
 }
 
-.skills-column h3 {
-  font-size: 28px;
-  text-align: left;
-  margin-bottom: 24px;
-}
-
-.skills-list {
-  list-style: none;
-  padding: 0;
-}
-
-.skills-list li {
-  padding: 8px 0;
-  border-bottom: 1px solid #e2e8f0;
-  font-size: 17px;
-  color: #334155;
-}
-
-.skills-list li:last-child {
-  border-bottom: none;
-}
-
-/* Modules list */
-.modules {
-  list-style: none;
-  margin-top: 32px;
-}
-
-.modules li {
-  border-bottom: 1px solid #e2e8f0;
-  padding: 32px 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.modules strong {
-  font-size: 28px;
+.testimonial .author {
   font-weight: 600;
-  margin-bottom: 12px;
-  color: #0f172a;
+  color: #b78c3c;
 }
 
-/* Education list */
-.education-list {
-  list-style: none;
-  margin-top: 32px;
+.rate-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 2rem 0;
+  text-align: center;
 }
 
-.education-list li {
-  padding: 24px 0;
-  border-bottom: 1px solid #e2e8f0;
-}
-
-.education-list li:last-child {
-  border-bottom: none;
-}
-
-.education-list strong {
-  font-size: 28px;
-  font-weight: 600;
+.rate-highlight {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #b78c3c;
   display: block;
-  margin-bottom: 8px;
+  margin: 0.5rem 0;
 }
 
-/* Footer */
+.rate-note {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-top: 1rem;
+}
+
+.cta-email {
+  display: inline-block;
+  background: #b78c3c;
+  color: white;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border-radius: 40px;
+  text-decoration: none;
+  margin: 1rem 0;
+  transition: all 0.2s ease;
+}
+
+.cta-email:hover {
+  background: #9b6f2c;
+  transform: translateY(-2px);
+}
+
+.cta-footer-note {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* ===== FOOTER ===== */
 footer {
   margin-top: 96px;
   text-align: center;
@@ -302,37 +282,60 @@ body.dark-mode {
 
 body.dark-mode h1,
 body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode .modules strong,
-body.dark-mode .education-list strong,
-body.dark-mode .skills-column h3 {
+body.dark-mode h3 {
   color: #f1f5f9;
 }
 
-body.dark-mode .subtitle,
 body.dark-mode p,
-body.dark-mode .exp-role,
-body.dark-mode .exp-date,
-body.dark-mode .skills-list li,
-body.dark-mode .article-meta,
-body.dark-mode .byline {
+body.dark-mode .lead {
   color: #cbd5e6;
 }
 
-body.dark-mode .expertise li {
+body.dark-mode .subtitle {
+  color: #94a3b8;
+  border-bottom-color: #334155;
+}
+
+body.dark-mode .back-link {
+  color: #94a3b8;
+}
+body.dark-mode .back-link:hover {
+  color: #b78c3c;
+}
+
+body.dark-mode .service-list li {
+  border-left-color: #b78c3c;
+}
+
+body.dark-mode .testimonial {
   background: #1e293b;
   border-color: #334155;
-  color: #f1f5f9;
 }
 
-body.dark-mode .modules li {
-  border-bottom-color: #334155;
+body.dark-mode .testimonial p {
+  color: #cbd5e6;
 }
 
-body.dark-mode .education-list li,
-body.dark-mode .skills-list li,
-body.dark-mode .experience-item {
-  border-bottom-color: #334155;
+body.dark-mode .rate-card {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+body.dark-mode .rate-card p,
+body.dark-mode .rate-note {
+  color: #cbd5e6;
+}
+
+body.dark-mode .rate-highlight {
+  color: #b78c3c;
+}
+
+body.dark-mode .cta-email {
+  background: #b78c3c;
+  color: white;
+}
+body.dark-mode .cta-email:hover {
+  background: #9b6f2c;
 }
 
 body.dark-mode footer {
@@ -343,33 +346,11 @@ body.dark-mode footer {
 body.dark-mode .theme-switcher-footer a {
   color: #94a3b8;
 }
-
 body.dark-mode .theme-switcher-footer a:hover {
   color: #b78c3c;
 }
-
 body.dark-mode .theme-switcher-footer .separator {
   color: #334155;
-}
-
-body.dark-mode .resume-btn {
-  background: #1e293b;
-  border-color: #334155;
-  color: #f1f5f9;
-}
-
-body.dark-mode .resume-btn:hover {
-  background: #334155;
-  border-color: #475569;
-}
-
-body.dark-mode nav a {
-  color: #cbd5e1;
-}
-
-body.dark-mode nav a:hover {
-  color: #b78c3c;
-  border-bottom-color: #b78c3c;
 }
 
 /* ===== RESPONSIVE ===== */
@@ -383,20 +364,16 @@ body.dark-mode nav a:hover {
   h2 {
     font-size: 32px;
   }
+  h3 {
+    font-size: 24px;
+  }
   .subtitle {
     font-size: 18px;
   }
   nav div {
     gap: 20px;
   }
-  .skills-grid {
-    gap: 32px;
-  }
-  .modules strong {
-    font-size: 24px;
-  }
-  .exp-meta {
-    flex-direction: column;
-    gap: 4px;
+  .testimonial-grid {
+    gap: 1.5rem;
   }
 }
