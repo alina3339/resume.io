@@ -1,4 +1,4 @@
-/*! Minimalist design – serif headings, sans body, clean spacing */
+/*! Minimalist design – with full dark mode support */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap');
 
 * {
@@ -54,7 +54,7 @@ h3 {
   color: #1e2a3a;
 }
 
-p {
+p, .lead {
   font-size: 18px;
   line-height: 1.7;
   color: #334155;
@@ -63,7 +63,6 @@ p {
 
 .lead {
   font-size: 1.2rem;
-  line-height: 1.6;
 }
 
 .subtitle {
@@ -126,7 +125,7 @@ nav a:hover {
   transform: translateY(-1px);
 }
 
-/* ===== BACK LINK (used on hire-me page) ===== */
+/* ===== BACK LINK (hire-me page) ===== */
 .back-link {
   display: inline-block;
   margin-bottom: 2rem;
@@ -140,7 +139,7 @@ nav a:hover {
   color: #b78c3c;
 }
 
-/* ===== HIRE ME PAGE SPECIFIC ===== */
+/* ===== HIRE ME PAGE ===== */
 .hire-header {
   text-align: center;
   margin-bottom: 3rem;
@@ -151,7 +150,6 @@ nav a:hover {
   padding: 0;
   margin: 1.5rem 0;
 }
-
 .service-list li {
   margin-bottom: 1.2rem;
   padding-left: 1.5rem;
@@ -164,7 +162,6 @@ nav a:hover {
   gap: 2rem;
   margin: 2rem 0;
 }
-
 .testimonial {
   background: white;
   border: 1px solid #e2e8f0;
@@ -173,18 +170,15 @@ nav a:hover {
   transition: all 0.2s ease;
   box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
-
 .testimonial:hover {
   transform: translateY(-4px);
   box-shadow: 0 20px 25px -12px rgba(0,0,0,0.1);
   border-color: #cbd5e1;
 }
-
 .testimonial p {
   font-style: italic;
   margin-bottom: 1rem;
 }
-
 .testimonial .author {
   font-weight: 600;
   color: #b78c3c;
@@ -198,7 +192,6 @@ nav a:hover {
   margin: 2rem 0;
   text-align: center;
 }
-
 .rate-highlight {
   font-size: 2.5rem;
   font-weight: 700;
@@ -206,7 +199,6 @@ nav a:hover {
   display: block;
   margin: 0.5rem 0;
 }
-
 .rate-note {
   font-size: 0.9rem;
   color: #64748b;
@@ -224,19 +216,17 @@ nav a:hover {
   margin: 1rem 0;
   transition: all 0.2s ease;
 }
-
 .cta-email:hover {
   background: #9b6f2c;
   transform: translateY(-2px);
 }
-
 .cta-footer-note {
   margin-top: 1.5rem;
   font-size: 0.9rem;
   color: #64748b;
 }
 
-/* ===== FOOTER ===== */
+/* ===== FOOTER & THEME SWITCHER ===== */
 footer {
   margin-top: 96px;
   text-align: center;
@@ -245,7 +235,6 @@ footer {
   border-top: 1px solid #e2e8f0;
   padding-top: 40px;
 }
-
 footer p {
   display: flex;
   align-items: center;
@@ -253,23 +242,19 @@ footer p {
   flex-wrap: wrap;
   gap: 12px;
 }
-
 .theme-switcher-footer {
   display: inline-flex;
   align-items: center;
   gap: 6px;
 }
-
 .theme-switcher-footer a {
   color: #475569;
   text-decoration: none;
   transition: color 0.2s ease;
 }
-
 .theme-switcher-footer a:hover {
   color: #b78c3c;
 }
-
 .theme-switcher-footer .separator {
   color: #cbd5e1;
 }
@@ -279,57 +264,71 @@ body.dark-mode {
   background: #0f172a;
   color: #e2e8f0;
 }
-
 body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3 {
   color: #f1f5f9;
 }
-
 body.dark-mode p,
-body.dark-mode .lead {
+body.dark-mode .lead,
+body.dark-mode .subtitle,
+body.dark-mode .contact-info,
+body.dark-mode .exp-meta,
+body.dark-mode .exp-role,
+body.dark-mode .exp-date,
+body.dark-mode .skills-list li,
+body.dark-mode .education-list li,
+body.dark-mode .modules li,
+body.dark-mode .article-meta,
+body.dark-mode .byline,
+body.dark-mode .testimonial p,
+body.dark-mode .rate-card p,
+body.dark-mode .rate-note,
+body.dark-mode .cta-footer-note,
+body.dark-mode .service-list li {
   color: #cbd5e6;
 }
-
 body.dark-mode .subtitle {
-  color: #94a3b8;
   border-bottom-color: #334155;
 }
-
+body.dark-mode nav a {
+  color: #cbd5e1;
+}
+body.dark-mode nav a:hover {
+  color: #b78c3c;
+  border-bottom-color: #b78c3c;
+}
+body.dark-mode .resume-btn {
+  background: #1e293b;
+  border-color: #334155;
+  color: #f1f5f9;
+}
+body.dark-mode .resume-btn:hover {
+  background: #334155;
+}
 body.dark-mode .back-link {
   color: #94a3b8;
 }
 body.dark-mode .back-link:hover {
   color: #b78c3c;
 }
-
 body.dark-mode .service-list li {
   border-left-color: #b78c3c;
 }
-
 body.dark-mode .testimonial {
   background: #1e293b;
   border-color: #334155;
 }
-
-body.dark-mode .testimonial p {
-  color: #cbd5e6;
+body.dark-mode .testimonial .author {
+  color: #b78c3c;
 }
-
 body.dark-mode .rate-card {
   background: #1e293b;
   border-color: #334155;
 }
-
-body.dark-mode .rate-card p,
-body.dark-mode .rate-note {
-  color: #cbd5e6;
-}
-
 body.dark-mode .rate-highlight {
   color: #b78c3c;
 }
-
 body.dark-mode .cta-email {
   background: #b78c3c;
   color: white;
@@ -337,12 +336,10 @@ body.dark-mode .cta-email {
 body.dark-mode .cta-email:hover {
   background: #9b6f2c;
 }
-
 body.dark-mode footer {
   border-top-color: #334155;
   color: #94a3b8;
 }
-
 body.dark-mode .theme-switcher-footer a {
   color: #94a3b8;
 }
