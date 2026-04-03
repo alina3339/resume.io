@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Azhar A Mohammed</title>
+
+  <!-- Fonts (same as index for consistency) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header (consistent with index) -->
+    <header>
+      <h1>Azhar A Mohammed</h1>
+      <p class="subtitle">
+        Oracle NetSuite Specialist | ERP Systems | Finance Transformation
+      </p>
+
+      <nav>
+        <div>
+          <a href="index.html">Home</a>
+          <a href="#philosophy">Philosophy</a>
+          <a href="#approach">Approach</a>
+          <a href="#direction">Direction</a>
+        </div>
+        <div>
+          <a href="https://www.linkedin.com/in/contactmeazhar/" class="resume-btn" target="_blank">LinkedIn</a>
+          <a href="Azhar_Resume_CC_1.4-1.pdf" class="resume-btn" target="_blank">Résumé</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero / Opening -->
+    <section>
+      <h2>About</h2>
+      <p>
+        Most systems do not fail loudly. They fail quietly—through friction, repetition, and small inconsistencies that accumulate over time.
+      </p>
+      <p>
+        My work exists to resolve that quiet tension. I design and refine enterprise systems so that they reflect the reality of a business with clarity, and operate with a level of reliability that no longer demands attention.
+      </p>
+    </section>
+
+    <!-- Philosophy -->
+    <section id="philosophy">
+      <h2>Philosophy</h2>
+      <p>
+        Technology, in itself, is rarely the problem. More often, it is the interpretation of a business process—misunderstood, overcomplicated, or left partially defined—that introduces instability into a system.
+      </p>
+      <p>
+        A well-designed ERP environment should not feel complex to its users. It should feel inevitable. Each action should lead naturally to the next, without the need for workarounds or correction.
+      </p>
+      <p>
+        The aim is not sophistication, but coherence.
+      </p>
+    </section>
+
+    <!-- Approach -->
+    <section id="approach">
+      <h2>Approach</h2>
+      <p>
+        My approach begins before configuration, before scripting, before implementation.
+      </p>
+      <p>
+        It begins with structure.
+      </p>
+      <p>
+        I work to reduce processes to their essential components—understanding how financial, operational, and reporting requirements intersect. Only once this structure is clear does the system design begin.
+      </p>
+
+      <ul class="expertise">
+        <li>Translate complex finance and operational requirements into structured system design</li>
+        <li>Eliminate manual processes through automation and workflow orchestration</li>
+        <li>Ensure data integrity through disciplined architecture and governance</li>
+        <li>Design systems that scale across entities, geographies, and acquisitions</li>
+      </ul>
+    </section>
+
+    <!-- Experience Perspective -->
+    <section>
+      <h2>Experience, Reframed</h2>
+      <p>
+        Over the past decade, I have worked across consulting, industry, and enterprise environments—supporting organisations at different stages of scale and complexity.
+      </p>
+      <p>
+        This includes leading implementations, stabilising underperforming systems, integrating fragmented platforms, and supporting finance teams through transformation initiatives.
+      </p>
+      <p>
+        Regardless of context, the underlying objective has remained consistent: to create systems that are trusted, understood, and relied upon without hesitation.
+      </p>
+    </section>
+
+    <!-- Direction -->
+    <section id="direction">
+      <h2>Current Direction</h2>
+      <p>
+        Increasingly, I am interested in how systems might move beyond static configuration.
+      </p>
+      <p>
+        The next evolution is not simply better automation, but systems that adapt—learning from usage patterns, anticipating needs, and refining workflows over time.
+      </p>
+      <p>
+        This is where ERP begins to shift from a system of record to a system of intelligence.
+      </p>
+    </section>
+
+    <!-- Closing -->
+    <section>
+      <h2>Closing Thought</h2>
+      <p>
+        The best systems are rarely noticed.
+      </p>
+      <p>
+        They do not require explanation. They do not interrupt.
+      </p>
+      <p>
+        They simply allow people to work—clearly, confidently, and without friction.
+      </p>
+    </section>
+
+    <!-- Footer (same logic as index) -->
+    <footer>
+      <p>
+        <span class="theme-switcher-footer">
+          <a href="#" id="theme-dark-footer">Dark</a>
+          <span class="separator">/</span>
+          <a href="#" id="theme-light-footer">Light</a>
+        </span>
+        © 2026 Azhar A Mohammed
+      </p>
+    </footer>
+
+  </div>
+
+  <!-- Same JS for theme consistency -->
+  <script>
+    function setTheme(theme) {
+      if (theme === 'dark') {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    function initThemeSwitcher() {
+      const darkBtn = document.getElementById('theme-dark-footer');
+      const lightBtn = document.getElementById('theme-light-footer');
+
+      if (darkBtn && lightBtn) {
+        darkBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          setTheme('dark');
+        });
+
+        lightBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          setTheme('light');
+        });
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      setTheme(savedTheme);
+    } else {
+      setTheme('light');
+    }
+
+    initThemeSwitcher();
+  </script>
+
+</body>
+</html>
